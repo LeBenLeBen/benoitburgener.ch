@@ -1,0 +1,29 @@
+---
+layout: blog
+title: Blog
+---
+
+<div class="posts">
+
+  {% for post in site.posts limit: 5 %}
+    <article class="post">
+      <div class="grid grid--center">
+        <div class="grid__item ten-twelfths lap--ten-twelfths palm--one-whole">
+          <header class="post__header">
+            <h2 class="post__title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <span class="post__meta">{{ post.date | date_to_long_string }}</span>
+          </header>
+        </div>
+      </div>
+
+      <div class="grid grid--center">
+        <div class="grid__item eight-twelfths lap--ten-twelfths palm--one-whole">
+          {{ post.content }}
+        </div>
+      </div>
+    </article>
+  {% endfor %}
+
+  <div class="infinite-spinner"></div>
+
+</div>

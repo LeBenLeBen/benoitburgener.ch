@@ -1,0 +1,10 @@
+name: Benoît Burgener
+description: A blog about web technologies and naive thoughts.
+url: http://benoitburgener.ch
+
+markdown: redcarpet
+pygments: true
+
+permalink: blog/:categories/:title/
+
+exclude: ['*.sublime-project', '*.sublime-workspace']

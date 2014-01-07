@@ -1,0 +1,35 @@
+---
+layout: default
+title: Projects
+group: projects
+---
+
+<section class="projects wrapper">
+
+  {% jsonball projects from file projects/projects.json %}
+  {% for project in projects %}
+    <article class="project">
+      <div class="grid grid--center">
+        <div class="grid__item eight-twelfths palm--one-whole lap--ten-twelfths">
+          <header class="project__header">
+            <h2 class="project__title"><a href="{{ project.url }}">{{ project.title }}</a></h2>
+            <p class="project__intro">{{ project.intro }}</p>
+          </header>
+
+          {% if project.img %}
+            <div class="project__image-wrapper">
+              <a href="{{ project.url }}"><img src="../img/projects/{{ project.img }}" class="project__image"></a>
+            </div>
+          {% endif %}
+
+          <ul class="project__meta nav--inline">
+            {% for tag in project.tags %}
+              <li class="nav--inline__item">{{ tag }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </article>
+  {% endfor %}
+
+</section>

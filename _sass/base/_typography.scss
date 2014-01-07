@@ -1,0 +1,160 @@
+/**
+ * Typography
+ */
+
+html {
+  font: #{$font-size-default}/#{$line-height-default} $font-family-primary;
+  color: $brand;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+// Headings
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  overflow: hidden;
+
+  color: $alt;
+  text-overflow: ellipsis;
+
+  a {
+    display: inline-block;
+  }
+}
+
+h1, h2 {
+  padding-bottom: 2px; // Overflow hidden hide the shadow
+
+  font-family: $font-family-secondary;
+  font-weight: normal;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+
+  text-shadow: 1px 1px 0 $bg, 3px 3px 0 $alt-light;
+}
+
+h1 { @include font-size(54px); margin-bottom: $double-spacing-unit; }
+h2 { @include font-size(44px); margin-bottom: $spacing-unit; }
+h3 { @include font-size(28px); margin-bottom: $half-spacing-unit; }
+h4 { @include font-size(24px); margin-bottom: 6px; }
+h5 { @include font-size(20px); margin-bottom: 3px; }
+h6 { @include font-size(18px); margin-bottom: 0; }
+
+
+// Links
+
+a {
+  color: $alt;
+  text-decoration: none;
+  @include transition(all .2s ease-out);
+
+  &:hover,
+  &:focus {
+    color: $alt-medium;
+  }
+}
+
+
+// Paragraphs
+
+p {
+  margin-top: 0;
+  margin-bottom: $spacing-unit;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+// Blockquote
+
+blockquote {
+  position: relative;
+  padding: 0 0 0 $spacing-unit;
+  margin: $double-spacing-unit $spacing-unit;
+
+  color: $alt-medium;
+  @include font-size(28px);
+  font-style: italic;
+
+  &::before {
+    content: '“';
+
+    position: absolute;
+    top: -$half-spacing-unit;
+    right: 100%;
+
+    @include font-size(56px);
+    line-height: 1;
+    color: $alt-light;
+  }
+
+  p {
+    margin-bottom: $half-spacing-unit;
+  }
+
+  cite {
+    @include font-size($font-size-default);
+    font-style: normal;
+  }
+}
+
+  @include grid-media-query('palm') {
+    blockquote {
+      margin: $spacing-unit 0;
+
+      &::before {
+        top: 0;
+        right: auto;
+        left: -4px;
+      }
+    }
+  }
+
+
+// Code
+
+pre {
+  padding: $spacing-unit;
+  margin-left: -$spacing-unit;
+  margin-right: -$spacing-unit;
+  margin-bottom: $spacing-unit;
+
+  font-family: "Monaco", monospace;
+  @include font-size(16px);
+  color: white;
+
+  background-color: #343d46;
+  border-radius: $border-radius;
+}
+
+code {
+  display: inline-block;
+  padding: 0 5px;
+
+  font-family: "Monaco", monospace;
+
+  background-color: $brand-light;
+  border-radius: $border-radius;
+}
+
+pre code {
+  display: block;
+  padding: 0;
+
+  background: none;
+  border-radius: 0;
+}
+
+
+// Others
+
+del {
+  color: $brand-medium;
+}
+
+abbr {
+  cursor: help;
+}

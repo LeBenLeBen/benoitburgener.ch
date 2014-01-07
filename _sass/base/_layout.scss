@@ -1,0 +1,90 @@
+/**
+ * Layout
+ */
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100%;
+  padding-bottom: $triple-spacing-unit;
+
+  background-color: $bg;
+}
+
+
+// Basic layout
+
+.wrapper {
+  @extend .clearfix;
+
+  max-width: 1156px;
+  padding: 0 $spacing-unit;
+  margin: 0 auto;
+}
+
+.site-header {
+  padding: $half-spacing-unit 0;
+
+  color: white;
+
+  background-color: $brand-dark;
+  @include background-image(linear-gradient(left top, $brand-dark, $brand));
+}
+
+.brand {
+  display: inline-block;
+  width: 70px;
+  margin: 0 ($spacing-unit - 16px) 0 0;
+  overflow: visible;
+
+  line-height: 1;
+  text-shadow: 0 1px 0 rgba(255,255,255,.08);
+
+  a {
+    color: $brand;
+
+    &:hover,
+    &:focus {
+      text-shadow: none;
+    }
+  }
+}
+
+.site-footer {
+  padding-top: $spacing-unit;
+
+  color: $brand-medium;
+  @include font-size($font-size-small);
+
+  border-top: 2px solid $brand-light;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+
+    &:hover {
+      color: $brand-dark;
+    }
+  }
+}
+
+.shift-below {
+  margin-bottom: $triple-spacing-unit;
+}
+
+.shift-above {
+  margin-top: $triple-spacing-unit;
+}
+
+
+// Some defaults
+
+img {
+  max-width: 100%;
+}
+
+svg {
+  display: block;
+}

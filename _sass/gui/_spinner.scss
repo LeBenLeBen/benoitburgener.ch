@@ -1,0 +1,33 @@
+/**
+ * Spinner
+ */
+
+$wave: transparentize($alt,.8);
+
+.infinite-spinner {
+  display: block !important;
+
+  width: 10px;
+  height: 10px;
+  margin: $double-spacing-unit auto 0;
+
+  background-color: $alt;
+  border-radius: 50%;
+
+  @include animation(blop 1.5s infinite);
+}
+
+@include keyframes(blop) {
+  0% {
+    @include box-shadow(none);
+  }
+  33% {
+    @include box-shadow(0 0 0 8px $wave);
+  }
+  66% {
+    @include box-shadow(0 0 0 8px $wave, 0 0 0 16px $wave);
+  }
+  100% {
+    @include box-shadow(0 0 0 8px $wave, 0 0 0 16px $wave, 0 0 0 24px $wave);
+  }
+}

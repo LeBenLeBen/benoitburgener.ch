@@ -1,0 +1,52 @@
+/**
+ * Mixins
+ */
+
+@import "compass/css3/images";
+@import "compass/css3/box-shadow";
+@import "compass/css3/transform";
+@import "compass/css3/transition";
+
+
+// Font
+
+// From Inuit.css
+// https://github.com/csswizardry/inuit.css/blob/master/generic/_mixins.scss
+@mixin font-size($font-size){
+  font-size: $font-size;
+  font-size: ($font-size / $font-size-default) * 1rem;
+}
+
+
+// Animations
+
+@mixin animation($animation) {
+  -webkit-animation: $animation;
+     -moz-animation: $animation;
+       -o-animation: $animation;
+          animation: $animation;
+
+  @include transform(translateZ(0));
+}
+
+@mixin animation-delay($delay) {
+  -webkit-animation-delay: $delay;
+     -moz-animation-delay: $delay;
+       -o-animation-delay: $delay;
+          animation-delay: $delay;
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}

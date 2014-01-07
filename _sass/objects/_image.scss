@@ -1,0 +1,70 @@
+/**
+ * Image
+ */
+
+.image {
+  display: block;
+  border-radius: $border-radius;
+}
+
+
+// Pulls
+
+.image--pull-left,
+.image--pull-right {
+  margin-bottom: 10px;
+}
+
+.image--pull-left {
+  float: left;
+  margin-right: $spacing-unit;
+}
+
+.image--pull-right {
+  float: right;
+  margin-left: $spacing-unit;
+}
+
+.image--center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+// Further pulls
+
+.image--pull-both {
+  margin-left: -94px;
+  margin-right: -94px;
+  margin-bottom: $spacing-unit;
+}
+
+.image--pull-left--further {
+  @extend .image--pull-left;
+  margin-left: -94px;
+}
+
+.image--pull-right--further {
+  @extend .image--pull-right;
+  margin-right: -94px;
+}
+
+
+// Responsiveness
+
+@include grid-media-query('palm') {
+  .image {
+    width: 100%;
+  }
+}
+
+@include grid-media-query('portable') {
+  .image--pull-both,
+  .image--pull-left--further {
+    margin-left: 0;
+  }
+  .image--pull-both,
+  .image--pull-right--further {
+    margin-right: 0;
+  }
+}

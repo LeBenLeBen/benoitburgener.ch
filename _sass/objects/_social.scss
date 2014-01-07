@@ -1,0 +1,60 @@
+/**
+ * Social
+ */
+
+.social {
+  @extend .nav--inline;
+}
+  .social__item {
+    @extend .nav--inline__item;
+    margin-right: $spacing-unit;
+  }
+
+.social__path {
+  fill: $alt-light;
+}
+
+.social__svg {
+  width: 64px;
+  height: auto;
+  @include transform-origin(bottom, center);
+}
+
+.social__svg,
+.social__path {
+  @include transition(all .2s ease-out);
+}
+
+.social__link {
+  display: block;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    .social__svg {
+      @include transform(scale(1.1));
+    }
+    .social__path {
+      fill: $alt-medium;
+    }
+  }
+}
+
+
+// Responsiveness
+
+@include grid-media-query('palm') {
+  .social {
+    display: table;
+    table-layout: fixed;
+  }
+
+  .social__item {
+    display: table-cell;
+    padding: 0 3px;
+  }
+
+  .social__svg {
+    width: 100%;
+  }
+}
