@@ -2,6 +2,8 @@ name: Benoît Burgener
 description: A blog about web technologies and naive thoughts.
 url: http://benoitburgener.ch
 
+safe: true
+
 markdown: redcarpet
 highlighter: pygments
 
