@@ -77,3 +77,7 @@ Much better, isn’t it? I got used to this method in all my projects and I stop
   pointer-events: none;
 }
 ```
+
+### Edit
+
+As pointed out by [Emmanuel](https://twitter.com/maiis/status/506394722915856384), you can use [CSScomb](https://github.com/csscomb) to batch process an existing project.
