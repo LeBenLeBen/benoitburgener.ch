@@ -11,7 +11,7 @@
   }
 
 .social__path {
-  fill: $alt-light;
+  fill: $brand-medium;
 }
 
 .social__svg {
@@ -34,8 +34,9 @@
     .social__svg {
       @include transform(scale(1.1));
     }
+
     .social__path {
-      fill: $alt-medium;
+      fill: $brand-dark;
     }
   }
 }
