@@ -9,18 +9,31 @@
     body {
       height: 100%;
     }
+    html {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+      box-sizing: border-box;
+    }
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
     body {
       margin: 0;
       padding: 0;
-      color: #85AE62;
+      color: #8DAF69;
       background: #01170C url('bg.jpg') no-repeat center;
       background-size: cover;
     }
     .wrapper {
+      max-width: 100%;
+      max-height: 100%;
       height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
     }
     a {
       color: inherit;
@@ -39,10 +52,44 @@
       padding: 0;
       list-style: none;
       text-align: center;
+      position: relative;
+    }
+    .social::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      padding-top: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+      transform: translate(-50%,-50%) scaleY(1.25) rotate(45deg);
+      background-color: rgba(1,23,12,.85);
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+    }
+    .social::after {
+      content: '';
+      display: block;
+      width: 130%;
+      height: 0;
+      overflow: hidden;
+      padding-top: 130%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 0;
+      transform: translate(-50%,-50%) scaleY(1.25) rotate(45deg);
+      border: 1px solid currentColor;
+      opacity: .6;
     }
     .social__item {
       display: inline-block;
       margin: 10px 20px;
+      position: relative;
+      z-index: 2;
     }
   </style>
 </head>
@@ -55,13 +102,13 @@
         </a>
       </li
      ><li class="social__item">
-        <a href="https://github.com/LeBenLeBen" title="GitHub">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.a{fill:none;stroke-linecap:round;stroke-linejoin:round}</style></defs><path class="a" d="M19.5 16.25c0-6-4.13-3.53-7.5-3.53s-7.5-2.38-7.5 3.53a3.5 3.5 0 0 0 3.5 3.5h8a3.5 3.5 0 0 0 3.5-3.5z"/><path class="a" d="M21.53 9.46s2.65-4.57-.6-7.24c-2 0-5.06 3.3-5.06 3.3a14.16 14.16 0 0 0-7.78 0s-3.06-3.3-5.06-3.3c-3.17 2.6-.73 7-.61 7.22a8.87 8.87 0 0 0-1.4 5.74c.24 3.13 2.85 6.54 6 6.54h9.89c3.14 0 5.74-3.41 6-6.54a8.86 8.86 0 0 0-1.38-5.72z"/><ellipse class="a" cx="15.52" cy="16.25" rx="1" ry="1.5"/><ellipse class="a" cx="8.52" cy="16.25" rx="1" ry="1.5"/></svg>
+        <a href="http://instagram.com/LeBenLeBenLeBen" title="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.a{fill:none;stroke-linejoin:round}</style></defs><rect class="a" x=".49" y=".5" width="23" height="23" rx="4" ry="4"/><path class="a" d="M.49 8.5h7.2M16.26 8.5h7.25"/><circle class="a" cx="11.99" cy="12" r="5.5"/><path class="a" d="M18.49 3.5h3v3h-3zM2.49 1v7.5M4.49.5v8M6.49.5v8"/></svg>
         </a>
       </li
      ><li class="social__item">
-        <a href="http://instagram.com/LeBenLeBenLeBen" title="Instagram">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.a{fill:none;stroke-linejoin:round}</style></defs><rect class="a" x=".49" y=".5" width="23" height="23" rx="4" ry="4"/><path class="a" d="M.49 8.5h7.2M16.26 8.5h7.25"/><circle class="a" cx="11.99" cy="12" r="5.5"/><path class="a" d="M18.49 3.5h3v3h-3zM2.49 1v7.5M4.49.5v8M6.49.5v8"/></svg>
+        <a href="https://github.com/LeBenLeBen" title="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.a{fill:none;stroke-linecap:round;stroke-linejoin:round}</style></defs><path class="a" d="M19.5 16.25c0-6-4.13-3.53-7.5-3.53s-7.5-2.38-7.5 3.53a3.5 3.5 0 0 0 3.5 3.5h8a3.5 3.5 0 0 0 3.5-3.5z"/><path class="a" d="M21.53 9.46s2.65-4.57-.6-7.24c-2 0-5.06 3.3-5.06 3.3a14.16 14.16 0 0 0-7.78 0s-3.06-3.3-5.06-3.3c-3.17 2.6-.73 7-.61 7.22a8.87 8.87 0 0 0-1.4 5.74c.24 3.13 2.85 6.54 6 6.54h9.89c3.14 0 5.74-3.41 6-6.54a8.86 8.86 0 0 0-1.38-5.72z"/><ellipse class="a" cx="15.52" cy="16.25" rx="1" ry="1.5"/><ellipse class="a" cx="8.52" cy="16.25" rx="1" ry="1.5"/></svg>
         </a>
       </li>
     </ul>
