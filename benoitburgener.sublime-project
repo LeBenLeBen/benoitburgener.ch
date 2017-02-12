@@ -1,9 +1,0 @@
-{
-	"folders":
-	[
-		{
-			"path": "~/Sites/benoitburgener.ch",
-			"folder_exclude_patterns": ["_site"]
-		}
-	]
-}
