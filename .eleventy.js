@@ -5,10 +5,13 @@ module.exports = function(eleventy) {
 
   let nunjucksEnvironment = new Nunjucks.Environment(
     new Nunjucks.FileSystemLoader(['src/_includes', 'src/_layouts'], {
-      watch: true,
+      watch: process.argv.includes('--serve'),
     })
   );
   eleventy.setLibrary('njk', nunjucksEnvironment);
+
+  // Minify HTML output
+  eleventy.addTransform('minify', require('./lib/transforms/minify.js'));
 
   eleventy.addPassthroughCopy('./src/assets/images');
   eleventy.addPassthroughCopy('./src/assets/icons');
