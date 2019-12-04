@@ -1,0 +1,20 @@
+<header class="site-header">
+  <div class="container flex justify-between pt-3 pb-5 md:pt-4 md:pb-6">
+    <div class="mr-4 font-bold"><a href="/" class="no-underline">LeBen</a></div>
+    <ul role="presentation" class="flex items-center -ml-3 sm:-ml-4 md:-ml-5 lg:-ml-6 text-sm md:text-base">
+      {% for item in navigation.primary %}
+        <li role="presentation" class="ml-3 sm:ml-4 md:ml-5 lg:ml-6">
+          <a href="{{ item.url }}" class="no-underline{% if page.url == item.url %} font-bold{% endif %}" {% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
+        </li>
+      {% endfor %}
+      <li class="ml-3 sm:ml-4 md:ml-5 lg:ml-6">
+        <button id="lightnessToggle" class="lightness-toggle btn btn--bare">
+          <div class="lightness-toggle__icons">
+            {{ icon('moon', 'dark-icon icon--100') }}
+            {{ icon('sun', 'light-icon icon--100') }}
+          </div>
+        </button>
+      </li>
+    </ul>
+  </div>
+</header>

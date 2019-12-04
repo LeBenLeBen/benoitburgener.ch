@@ -1,0 +1,27 @@
+[
+  {
+    "label": "Find me on GitHub",
+    "icon": "github",
+    "url": "https://github.com/lebenleben/"
+  },
+  {
+    "label": "Find me on Twitter",
+    "icon": "twitter",
+    "url": "https://twitter.com/lebenleben/"
+  },
+  {
+    "label": "Find me on Instagram",
+    "icon": "instagram",
+    "url": "https://www.instagram.com/lebenlebenleben/"
+  },
+  {
+    "label": "Find me on Product Hunt",
+    "icon": "product-hunt",
+    "url": "https://www.producthunt.com/@lebenleben"
+  },
+  {
+    "label": "Contact me by e-mail",
+    "icon": "envelope",
+    "url": "mailto:benoitburgener@gmail.com"
+  }
+]

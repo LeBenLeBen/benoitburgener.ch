@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Palette",
+    "description": "A tool to create a palette of shades from a given color and export it for Sass, CSS or Sketch.",
+    "image": {
+      "url": "/assets/images/projects/palette.png",
+      "alt": ""
+    },
+    "url": {
+      "label": "lebenleben.github.io/palette",
+      "link": "https://lebenleben.github.io/palette/"
+    },
+    "tags": ["Vue.js", "Tailwind"],
+    "color": {
+      "light": "#DC8D1D",
+      "dark": "#EAAA62"
+    }
+  },
+  {
+    "name": "Citations",
+    "description": "Previously a React app listing quotes from a Google Spreadsheet, it’s now a Vue app using a Firebase Firestore database.",
+    "image": {
+      "url": "/assets/images/projects/quotes.png",
+      "alt": ""
+    },
+    "url": {
+      "label": "github.com/LeBenLeBen/citations",
+      "link": "https://github.com/LeBenLeBen/citations"
+    },
+    "tags": ["Vue.js", "Firebase", "Kanbasu"],
+    "color": {
+      "light": "#45352c",
+      "dark": "#d3ac95"
+    }
+  },
+  {
+    "name": "Vertic-Halle",
+    "description": "One of my very few clients as a freelance, Vertic-Halle is a company operating multiple climbing centers in Switzerland.",
+    "image": {
+      "url": "/assets/images/projects/vertic-halle.png",
+      "alt": ""
+    },
+    "url": {
+      "label": "vertic-halle.ch",
+      "link": "https://www.vertic-halle.ch/"
+    },
+    "tags": ["Kirby", "Vue.js", "Kanbasu"],
+    "color": {
+      "light": "#774593",
+      "dark": "#916CA8"
+    }
+  },
+  {
+    "name": "Cookr",
+    "description": "Cookr is an app I’ve made to have an easy access to my cooking recipes (and incidentally learn Ruby on Rails basics).",
+    "image": {
+      "url": "/assets/images/projects/cookr.png",
+      "alt": ""
+    },
+    "url": {
+      "label": "cookr.ch",
+      "link": "https://www.cookr.ch/"
+    },
+    "tags": ["Ruby on Rails", "Vue.js", "Kanbasu"],
+    "color": {
+      "light": "#d45d79",
+      "dark": "#d45d79"
+    }
+  },
+  {
+    "name": "Kanbasu",
+    "description": "A lightweight CSS framework written in Sass I’ve created with my colleagues at Liip.",
+    "image": {
+      "url": "/assets/images/projects/kanbasu.png",
+      "alt": ""
+    },
+    "url": {
+      "label": "kanbasu.liip.ch",
+      "link": "https://kanbasu.liip.ch/"
+    },
+    "tags": ["Sass", "Fractal"],
+    "color": {
+      "light": "#c03447",
+      "dark": "#DD5C6E"
+    }
+  }
+]

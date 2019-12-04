@@ -1,0 +1,52 @@
+[
+  {
+    "date": "Nov 3, 2019",
+    "event": {
+      "name": "Webmardi",
+      "url": "http://webmardi.ch"
+    },
+    "description": "This talk was about <a href='https://storybook.js.org/'>Storybook.js</a>, a tool to develop and document components libraries.",
+    "slides": "https://speakerdeck.com/leben/building-ui-components-with-storybook",
+    "video": "https://www.youtube.com/watch?v=HFmInnAbNh8"
+  },
+  {
+    "date": "Nov 6, 2018",
+    "event": {
+      "name": "Liip Talk"
+    },
+    "description": "Lessons learned on the development of a responsive, accessible and multilingual component system integrated by a separate development team for a Liip customer."
+  },
+  {
+    "date": "Mar 23, 2018",
+    "event": {
+      "name": "PowerCoders",
+      "url": "https://powercoders.org/"
+    },
+    "description": "An introduction to front-end development given to the first batch of PowerCoders Lausanne interns.",
+    "slides": "https://speakerdeck.com/leben/javascript-tools"
+  },
+  {
+    "date": "Sep 11, 2015",
+    "event": {
+      "name": "Front-end Meetup Romandie"
+    },
+    "description": "This talk was an introduction to <a href='https://www.pixijs.com/'>PixiJS</a>, a library to create performant 2D Canvas.",
+    "slides": "https://speakerdeck.com/leben/pixi-dot-js"
+  },
+  {
+    "date": "Jun 10, 2015",
+    "event": {
+      "name": "Liip Innoday"
+    },
+    "description": "A one-day workshop about object-oriented CSS I gave to some of my colleagues."
+  },
+  {
+    "date": "Nov 4, 2014",
+    "event": {
+      "name": "Webmardi",
+      "url": "http://webmardi.ch"
+    },
+    "description": "Tips and tricks to create reusable, performant, object-oriented CSS component libraries.",
+    "slides": "https://speakerdeck.com/leben/organising-stylesheets-and-the-bem-methodology"
+  }
+]

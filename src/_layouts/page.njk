@@ -1,0 +1,9 @@
+{% extends "default.njk" %}
+
+{% block main %}
+  <div class="container{% if containerClass %} {{ containerClass }}{% endif %}">
+    <h1 class="h2 mb-4 md:mb-6 lg:mb-8">{{ title }}</h1>
+
+    {{ content | safe }}
+  </div>
+{% endblock %}

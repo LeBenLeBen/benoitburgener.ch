@@ -1,0 +1,31 @@
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  pointer-events: none;
+
+  fill: currentColor;
+  will-change: transform; /* Prevent cropped/blurry icons on Firefox */
+}
+
+@responsive {
+  .icon--75 {
+    width: 18px;
+    height: 18px;
+
+    vertical-align: -3px;
+  }
+
+  .icon--100 {
+    width: 24px;
+    height: 24px;
+
+    vertical-align: -5px;
+  }
+
+  .icon--150 {
+    width: 36px;
+    height: 36px;
+
+    vertical-align: -6px;
+  }
+}

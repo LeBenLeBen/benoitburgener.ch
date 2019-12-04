@@ -1,0 +1,103 @@
+.btn {
+  @apply inline-block;
+  @apply py-2 px-5;
+  @apply text-sm font-bold uppercase no-underline;
+  @apply rounded-full;
+
+  transition: all 0.1s ease-out;
+
+  &:hover,
+  &:focus {
+    color: theme('colors.mint.600');
+  }
+
+  &:active {
+    @apply shadow-none;
+    transform: translateY(2px);
+  }
+}
+
+.btn--default {
+  @apply text-gray-700;
+  @apply border-2 border-gray-400 border-solid;
+
+  &:hover,
+  &:focus {
+    @apply bg-white shadow border-transparent;
+
+    .mode-dark & {
+      @apply shadow-none;
+    }
+  }
+}
+
+.btn--primary {
+  overflow: hidden;
+
+  position: relative;
+  z-index: 1;
+
+  @apply text-white;
+
+  @apply shadow;
+  background-image: linear-gradient(
+    to bottom right,
+    theme('colors.mint.400'),
+    theme('colors.blue.700')
+  );
+
+  &::before {
+    content: '';
+    display: block;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    background-image: linear-gradient(
+      to bottom right,
+      theme('colors.mint.300'),
+      theme('colors.blue.700')
+    );
+    transition: inherit;
+    opacity: 0;
+  }
+
+  &:hover,
+  &:focus {
+    @apply text-white;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  .mode-dark & {
+    color: white;
+    background-image: linear-gradient(
+      to bottom right,
+      theme('colors.mint.400'),
+      theme('colors.blue.200')
+    );
+
+    &::before {
+      background-image: linear-gradient(
+        to bottom right,
+        theme('colors.mint.500'),
+        theme('colors.blue.300')
+      );
+    }
+  }
+}
+
+.btn--sm {
+  @apply py-1 px-3;
+  @apply text-xs;
+}
+
+.btn--bare {
+  @apply p-0;
+}

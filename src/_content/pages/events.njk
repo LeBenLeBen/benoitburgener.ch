@@ -1,0 +1,77 @@
+---
+title: Events
+permalink: /events/index.html
+containerClass: container--sm
+---
+
+{% from "macros.njk" import icon %}
+
+<div class="timeline">
+  <div>
+    <h2 class="timeline__title h3">Speaker</h2>
+  </div>
+  <div class="timeline__events">
+    {% for talk in talks %}
+      <article class="timeline__event flex flex-col sm:flex-row sm:items-baseline pb-6 md:pb-8 lg:pb-10">
+        <div class="sm:w-1/5 sm:text-right">
+          <div class="text-sm text-mint-700 dark:text-mint-500">{{ talk.date }}</div>
+        </div>
+        <div class="sm:w-4/5 sm:pl-10 md:pl-16">
+          <div class="font-bold text-lg leading-snug mb-1">
+            {% if talk.event.url %}
+              <a href="{{ talk.event.url }}">{{ talk.event.name }}</a>
+            {% else %}
+              {{ talk.event.name }}
+            {% endif %}
+          </div>
+          <p class="text-gray-700 dark:text-gray-600">
+            {{ talk.description | safe }}
+          </p>
+          {% if talk.slides or talk.video %}
+            <div class="mt-2">
+              {% if talk.slides %}
+                <a href="{{ talk.slides }}" class="btn btn--default btn--sm mr-2 mb-2">
+                  {{ icon('presentation', 'icon--75 text-gray-600 mr-1') }}
+                  Slides
+                </a>
+              {%- endif -%}
+              {%- if talk.video -%}
+                <a href="{{ talk.video }}" class="btn btn--default btn--sm">
+                  {{ icon('presentation', 'icon--75 text-gray-600 mr-1') }}
+                  Video
+                </a>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="timeline mt-10">
+  <div>
+    <h2 class="timeline__title h3">Attendee</h2>
+  </div>
+  <div class="timeline__events">
+    {% for conference in conferences %}
+      <article class="timeline__event flex flex-col sm:flex-row sm:items-baseline pb-6">
+        <div class="sm:w-1/5 sm:text-right">
+          <div class="text-sm text-mint-700 dark:text-mint-500">{{ conference.date }}</div>
+        </div>
+        <div class="sm:w-2/5 sm:pl-10 md:pl-16">
+          <div class="font-bold text-lg leading-snug mb-1">
+            {% if conference.event.url %}
+              <a href="{{ conference.event.url }}">{{ conference.event.name }}</a>
+            {% else %}
+              {{ conference.event.name }}
+            {% endif %}
+          </div>
+        </div>
+        <div class="sm:w-2/5 sm:pl-10 md:pl-16 text-gray-700 dark:text-gray-600">
+          {{ conference.location }}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</div>

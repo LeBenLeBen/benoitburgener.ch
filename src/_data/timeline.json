@@ -1,0 +1,76 @@
+[
+  {
+    "date": "2019",
+    "title": "Reduced my working time to 80%",
+    "description": "Having more time for personal projects and open-source"
+  },
+  {
+    "date": "2018",
+    "title": "Coached at <a href=\"https://powercoders.org/\">PowerCoders</a>",
+    "description": "A coding academy for refugees"
+  },
+  {
+    "date": "2015",
+    "title": "Created <a href=\"https://kanbasu.liip.ch/\">Kanbasu</a>",
+    "description": "A lightweight CSS framework written in Sass"
+  },
+  {
+    "date": "2014",
+    "title": "Joined <a href=\"http://uxromandie.ch/\">UX Romandie</a> organizers"
+  },
+  {
+    "date": "2014",
+    "title": "First time public speaker"
+  },
+  {
+    "date": "2014",
+    "title": "Moved to Lausanne and started working at <a href=\"https://www.liip.ch\">Liip</a>"
+  },
+  {
+    "date": "2013",
+    "title": "Made my first open-source contribution"
+  },
+  {
+    "date": "2012",
+    "title": "Attended my first web conference"
+  },
+  {
+    "date": "2011",
+    "title": "Started working at <a href=\"https://en.wikipedia.org/wiki/Urturn\">Webdoc/Urturn</a>",
+    "description": "Lausanne, Switzerland"
+  },
+  {
+    "date": "2010",
+    "title": "Joined <a href=\"https://www.metropop.ch/\">Metropop Festival</a> staff in communication department"
+  },
+  {
+    "date": "2010",
+    "title": "Started working part-time at <a href=\"http://www.point-carre.ch/\">Point Carré</a>",
+    "description": "Vevey, Switzerland"
+  },
+  {
+    "date": "2009",
+    "title": "Got my first client as a freelance"
+  },
+  {
+    "date": "2009",
+    "title": "Completed a professional maturity in Arts"
+  },
+  {
+    "date": "2008",
+    "title": "Completed a Mediamatician apprenticeship"
+  },
+  {
+    "date": "2001",
+    "title": "Created my first web page"
+  },
+  {
+    "date": "1993",
+    "title": "First interaction with a computer"
+  },
+  {
+    "date": "1989",
+    "title": "Born",
+    "description": "Sion, Switzerland"
+  }
+]

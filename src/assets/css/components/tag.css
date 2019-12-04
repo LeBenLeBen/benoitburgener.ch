@@ -1,0 +1,17 @@
+.tag {
+  display: inline-block;
+  @apply py-1 px-2;
+
+  @apply text-gray-600;
+  @apply text-xs;
+  @apply leading-tight;
+  font-weight: bold;
+  white-space: nowrap;
+
+  @apply bg-gray-100;
+  @apply rounded-sm;
+
+  .mode-dark & {
+    @apply bg-gray-200;
+  }
+}

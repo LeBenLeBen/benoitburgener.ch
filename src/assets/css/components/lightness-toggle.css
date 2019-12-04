@@ -1,0 +1,15 @@
+.lightness-toggle {
+  display: flex;
+  flex-direction: column;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+
+.lightness-toggle__icons {
+  transition: all 0.3s cubic-bezier(0.24, 0.82, 0.79, 1.22);
+
+  .mode-dark & {
+    transform: translateY(-50%);
+  }
+}

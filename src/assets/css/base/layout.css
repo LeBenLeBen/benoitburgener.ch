@@ -1,0 +1,42 @@
+.master {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.site-header {
+  background: url(/assets/images/bg.svg) repeat-x bottom center;
+
+  .mode-dark & {
+    background-image: url(/assets/images/bg-dark.svg);
+  }
+}
+
+.site-footer {
+  background: url(/assets/images/bg.svg) repeat-x top center;
+
+  .mode-dark & {
+    background-image: url(/assets/images/bg-dark.svg);
+  }
+}
+
+.container {
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+
+  @supports (padding: max(0px)) {
+    padding-left: max(1em, env(safe-area-inset-left));
+    padding-right: max(1em, env(safe-area-inset-right));
+  }
+}
+
+.container--sm {
+  max-width: 40rem;
+}

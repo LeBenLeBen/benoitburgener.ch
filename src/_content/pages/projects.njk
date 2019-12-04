@@ -1,0 +1,37 @@
+---
+title: Projects
+permalink: /projects/index.html
+containerClass: sm-max:max-w-sm
+layout: default.njk
+---
+
+<div class="overflow-hidden">
+  <div class="container">
+    <h1 class="h2 mb-4 md:mb-6 lg:mb-8">{{ title }}</h1>
+
+    <div class="projects">
+      {% for project in projects %}
+        <article class="project flex flex-col {% if loop.index % 2 == 0 %}md:flex-row-reverse md:text-right{% else %}md:flex-row{% endif %} mt-10 first:mt-0" style="--project-color-light: {{ project.color.light }}; --project-color-dark: {{ project.color.dark }};">
+          <div class="md:w-3/5 mb-5 -mx-2 sm:-mx-12 md:mb0 md:mx-0 {% if loop.index % 2 == 0 %}md:pl-10 lg:pl-16{% else %}md:pr-10 lg:pr-16{% endif %}">
+            <img src="{{ project.image.url }}" alt="{{ project.image.alt }}" class="project__image rounded md:rounded-lg shadow-lg md:shadow-xl lg:shadow-2xl {% if loop.index % 2 == 0 %}float-left{% else %}float-right{% endif %}" loading="lazy" />
+          </div>
+
+          <div class="project__meta md:w-2/5 md:pt-5 lg:pt-16">
+            <h3 class="project__title mb-1">{{ project.name }}</h3>
+            <div class="mb-3">
+              <a href="{{ project.url.link }}" class="text-gray-600">{{ project.url.label }}</a>
+            </div>
+            <p class="text-gray-700 mb-3">{{ project.description | safe }}</p>
+            <ul class="flex flex-wrap {% if loop.index % 2 == 0 %}md:justify-end{% endif %} -ml-3 -mt-1">
+              {% for tag in project.tags %}
+                <li class="pl-3 pt-1">
+                  <span class="tag">{{ tag }}</span>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</div>

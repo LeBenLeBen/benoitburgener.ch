@@ -1,0 +1,54 @@
+.project {
+}
+
+.project__image {
+  max-width: 100%;
+
+  @screen md {
+    max-width: 52vw;
+  }
+}
+
+.project__meta {
+  position: relative;
+
+  @screen md {
+    &::before {
+      content: '';
+      width: 120%;
+      height: 120%;
+
+      position: absolute;
+      top: 0;
+      left: -30%;
+      z-index: -2;
+
+      background-image: url('/assets/images/bubble-1.svg');
+      background-position: 120% 0;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      .mode-dark & {
+        background-image: url('/assets/images/bubble-1-dark.svg');
+      }
+
+      .project:nth-child(even) & {
+        left: auto;
+        right: -30%;
+        background-image: url('/assets/images/bubble-2.svg');
+
+        .mode-dark & {
+          background-image: url('/assets/images/bubble-2-dark.svg');
+        }
+      }
+    }
+  }
+}
+
+.project__title {
+  color: var(--project-color-light);
+
+  .mode-dark & {
+    color: var(--project-color-dark);
+  }
+}

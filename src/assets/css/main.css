@@ -1,0 +1,84 @@
+@import 'tailwindcss/base';
+@import 'base/layout';
+@import 'base/typography';
+@import 'base/accessibility';
+
+@import 'tailwindcss/components';
+@import 'components/icon';
+@import 'components/btn';
+@import 'components/tag';
+@import 'components/memoji';
+@import 'components/project';
+@import 'components/timeline';
+@import 'components/lightness-toggle';
+
+@import 'tailwindcss/utilities';
+@import 'tailwindcss/screens';
+
+:root {
+  --gray-100: #f7fafc;
+  --gray-200: #edf2f7;
+  --gray-300: #e2e8f0;
+  --gray-400: #cbd5e0;
+  --gray-500: #a0aec0;
+  --gray-600: #718096;
+  --gray-700: #4a5568;
+  --gray-800: #2d3748;
+  --gray-900: #1a202c;
+
+  --blue-100: #edf5fc;
+  --blue-200: #c1dbf5;
+  --blue-300: #95c2ee;
+  --blue-400: #69a8e8;
+  --blue-500: #3d8fe1;
+  --blue-600: #2075cb;
+  --blue-700: #195c9f;
+  --blue-800: #124273;
+  --blue-900: #0b2947;
+
+  --mint-100: #ebf9f7;
+  --mint-200: #ccf0e9;
+  --mint-300: #a4e5d9;
+  --mint-400: #79d8c7;
+  --mint-500: #46d2b9;
+  --mint-600: #29bca1;
+  --mint-700: #149f85;
+  --mint-800: #097762;
+  --mint-900: #004d3e;
+
+  --white: #ffffff;
+}
+
+.mode-dark {
+  --gray-900: #edf2f7;
+  --gray-800: #e2e8f0;
+  --gray-700: #cbd5e0;
+  --gray-600: #a0aec0;
+  --gray-500: #718096;
+  --gray-400: #4a5568;
+  --gray-300: #2d3748;
+  --gray-200: #1a202c;
+  --gray-100: #10151c;
+
+  --blue-900: #edf5fc;
+  --blue-800: #c1dbf5;
+  --blue-700: #95c2ee;
+  --blue-600: #69a8e8;
+  --blue-500: #3d8fe1;
+  --blue-400: #2075cb;
+  --blue-300: #195c9f;
+  --blue-200: #124273;
+  --blue-100: #0b2947;
+
+  --mint-900: #ebf9f7;
+  --mint-800: #ccf0e9;
+  --mint-700: #a4e5d9;
+  --mint-600: #79d8c7;
+  --mint-500: #46d2b9;
+  --mint-400: #29bca1;
+  --mint-300: #149f85;
+  --mint-200: #097762;
+  --mint-100: #004d3e;
+
+  --white: var(--gray-200);
+}

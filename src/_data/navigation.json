@@ -1,0 +1,16 @@
+{
+  "primary": [
+    {
+      "label": "About",
+      "url": "/"
+    },
+    {
+      "label": "Projects",
+      "url": "/projects/"
+    },
+    {
+      "label": "Events",
+      "url": "/events/"
+    }
+  ]
+}

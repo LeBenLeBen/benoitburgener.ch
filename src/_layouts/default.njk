@@ -1,0 +1,29 @@
+{% from "macros.njk" import icon %}
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>{% if title %}{{ title }} &middot; {% endif %}{{ site.title }}</title>
+
+    <link rel="stylesheet" href="/assets/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="https://cloud.typography.com/7931852/6968012/css/fonts.css" type="text/css" />
+  </head>
+
+  <body class="bg-gray-300 text-gray-800 dark:text-gray-700">
+    <div class="master{% if masterClass %} {{ masterClass }}{% endif %}">
+      {% include "header.njk" %}
+
+      <main class="main py-6 md:py-8 lg:py-12">
+        {% block main %}
+          {{ content|safe }}
+        {% endblock %}
+      </main>
+
+      {% include "footer.njk" %}
+    </div>
+
+    {% include "scripts.njk" %}
+  </body>
+</html>

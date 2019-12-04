@@ -1,0 +1,137 @@
+[
+  {
+    "date": "Feb 2020",
+    "event": {
+      "name": "Vue.js Amsterdam",
+      "url": "https://vuejs.amsterdam/"
+    },
+    "location": "Amsterdam, Netherlands"
+  },
+  {
+    "date": "Jun 2019",
+    "event": {
+      "name": "JSConf EU",
+      "url": "https://2019.jsconf.eu/"
+    },
+    "location": "Berlin, Germany"
+  },
+  {
+    "date": "May 2019",
+    "event": {
+      "name": "CSSConf EU",
+      "url": "https://2019.cssconf.eu/"
+    },
+    "location": "Berlin, Germany"
+  },
+  {
+    "date": "Aug 2018",
+    "event": {
+      "name": "Frontend Conference",
+      "url": "https://frontconference.com/"
+    },
+    "location": "Zürich, Switzerland"
+  },
+  {
+    "date": "Apr 2018",
+    "event": {
+      "name": "Uphill Conf",
+      "url": "https://uphillconf.com/"
+    },
+    "location": "Bern, Switzerland"
+  },
+  {
+    "date": "Sept 2017",
+    "event": {
+      "name": "Frontend Conference",
+      "url": "https://frontconference.com/"
+    },
+    "location": "Zürich, Switzerland"
+  },
+  {
+    "date": "May 2017",
+    "event": {
+      "name": "JSConf EU",
+      "url": "https://2017.jsconf.eu/"
+    },
+    "location": "Berlin, Germany"
+  },
+  {
+    "date": "May 2017",
+    "event": {
+      "name": "CSSConf EU",
+      "url": "https://2017.cssconf.eu/"
+    },
+    "location": "Berlin, Germany"
+  },
+  {
+    "date": "Dec 2016",
+    "event": {
+      "name": "dotJS",
+      "url": "https://2016.dotjs.io/"
+    },
+    "location": "Paris, France"
+  },
+  {
+    "date": "Dec 2016",
+    "event": {
+      "name": "dotCSS",
+      "url": "https://2016.dotcss.io/"
+    },
+    "location": "Paris, France"
+  },
+  {
+    "date": "Nov 2016",
+    "event": {
+      "name": "WordCamp Geneva",
+      "url": "https://2016.geneva.wordcamp.org/"
+    },
+    "location": "Geneva, Switzerland"
+  },
+  {
+    "date": "Jun 2016",
+    "event": {
+      "name": "UX Lausanne",
+      "url": "http://2016.uxlausanne.com/"
+    },
+    "location": "Lausanne, Switzerland"
+  },
+  {
+    "date": "Sep 2015",
+    "event": {
+      "name": "Fullstack Fest / Future JS",
+      "url": "https://www.fullstackfest.com"
+    },
+    "location": "Barcelona, Spain"
+  },
+  {
+    "date": "Jun 2015",
+    "event": {
+      "name": "UX Lausanne",
+      "url": "http://2016.uxlausanne.com/"
+    },
+    "location": "Lausanne, Switzerland"
+  },
+  {
+    "date": "Aug 2014",
+    "event": {
+      "name": "Frontend Conference",
+      "url": "https://frontconference.com/"
+    },
+    "location": "Zürich, Switzerland"
+  },
+  {
+    "date": "May 2014",
+    "event": {
+      "name": "UX Lausanne",
+      "url": "http://2014.uxlausanne.com/"
+    },
+    "location": "Lausanne, Switzerland"
+  },
+  {
+    "date": "May 2012",
+    "event": {
+      "name": "Future Of Web Design"
+    },
+    "location": "London, United Kingdom"
+  }
+]
