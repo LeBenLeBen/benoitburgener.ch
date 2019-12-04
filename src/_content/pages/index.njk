@@ -11,10 +11,10 @@ layout: default.njk
     <div class="memoji-wrapper">
       <div class="memoji"></div>
     </div>
-    <div class="text-gray-600 italic">Hello, my name is</div>
+    <div class="text-gray-700 italic">Hello, my name is</div>
     <h1 class="my-1">Benoît Burgener</h1>
     <p class="text-xl md:text-2xl leading-tight italic">I’m a <strong>front-end developer</strong> from Switzerland, currently working at <a href="https://www.liip.ch/">Liip</a> in Lausanne.</p>
-    <p class="text-gray-600 mt-4">Short bio</p>
+    <p class="text-gray-700 mt-4">Short bio</p>
     <p class="mt-4">
       <a href="mailto:benoit.burgener@gmail.com" class="btn btn--primary">
         {{ icon('envelope', 'icon--100 mr-2 text-mint-200 dark:text-mint-700') }}
@@ -33,7 +33,7 @@ layout: default.njk
       {% for event in timeline %}
         <article class="timeline__event flex flex-col sm:flex-row sm:items-baseline pb-6">
           <div class="sm:w-1/5 sm:text-right">
-            <div class="text-sm text-mint-700 dark:text-mint-500">{{ event.date }}</div>
+            <div class="text-mint-700 dark:text-mint-500">{{ event.date }}</div>
           </div>
           <div class="sm:w-4/5 sm:pl-10 md:pl-16">
             <div class="font-bold text-lg leading-snug mb-1">

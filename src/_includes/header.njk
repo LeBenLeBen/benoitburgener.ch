@@ -7,7 +7,7 @@
           <a href="{{ item.url }}" class="no-underline{% if page.url == item.url %} font-bold{% endif %}" {% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
         </li>
       {% endfor %}
-      <li class="ml-3 sm:ml-4 md:ml-5 lg:ml-6">
+      <li role="presentation" class="ml-3 sm:ml-4 md:ml-5 lg:ml-6">
         <button id="lightnessToggle" class="lightness-toggle btn btn--bare">
           <div class="lightness-toggle__icons">
             {{ icon('moon', 'dark-icon icon--100') }}

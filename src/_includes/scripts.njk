@@ -1,9 +1,16 @@
 <script type="text/javascript">
-  function setLightnessMode(isDark, save) {
+(function(){
+  function setLightnessMode(isDark, save, toggleBtn) {
     if (isDark) {
       document.documentElement.classList.add('mode-dark');
+      var title = 'Disable dark mode';
+      toggleBtn.setAttribute('aria-label', title);
+      toggleBtn.setAttribute('title', title);
     } else {
       document.documentElement.classList.remove('mode-dark');
+      var title = 'Enable dark mode';
+      toggleBtn.setAttribute('aria-label', title);
+      toggleBtn.setAttribute('title', title);
     }
 
     if (save) {
@@ -14,23 +21,24 @@
   var storedValue = sessionStorage.getItem('dark-mode');
   var mediaQuery = matchMedia('(prefers-color-scheme: dark)');
 
-  // Set the intitial mode on page load
-  // 1. See if user has picked a specific theme before from Session Storage
-  // 2. Fallback to prefers-color-sheme media query
-  setLightnessMode(storedValue ? JSON.parse(storedValue) : mediaQuery.matches);
-
-  // Listen to OS mode change only if user didn't explicitly pick a theme earlier
-  if (!storedValue) {
-    mediaQuery.addListener(function(event) {
-      setLightnessMode(event.matches);
-    });
-  }
-
-  // Enable toggle button interactivity
   document.addEventListener('DOMContentLoaded', function() {
+  // Enable toggle button interactivity
     var toggleBtn = document.querySelector('#lightnessToggle');
     toggleBtn.addEventListener('click', function() {
-      setLightnessMode(!document.documentElement.classList.contains('mode-dark'), true);
+      setLightnessMode(!document.documentElement.classList.contains('mode-dark'), true, toggleBtn);
     });
+
+    // Listen to OS mode change only if user didn't explicitly pick a theme earlier
+    if (!storedValue) {
+      mediaQuery.addListener(function(event) {
+        setLightnessMode(event.matches, false, toggleBtn);
+      });
+    }
+
+    // Set the intitial mode on page load
+    // 1. See if user has picked a specific theme before from Session Storage
+    // 2. Fallback to prefers-color-sheme media query
+    setLightnessMode(storedValue ? JSON.parse(storedValue) : mediaQuery.matches, false, toggleBtn);
   });
+})();
 </script>
