@@ -5,15 +5,15 @@ containerClass: sm-max:max-w-sm
 layout: default.njk
 ---
 
-<div class="overflow-hidden">
+<div class="overflow-hidden pb-12">
   <div class="container">
     <h1 class="h2 mb-4 md:mb-6 lg:mb-8">{{ title }}</h1>
 
     <div class="projects">
       {% for project in projects %}
         <article class="project flex flex-col {% if loop.index % 2 == 0 %}md:flex-row-reverse md:text-right{% else %}md:flex-row{% endif %} mt-10 first:mt-0" style="--project-color-light: {{ project.color.light }}; --project-color-dark: {{ project.color.dark }};">
-          <div class="md:w-3/5 mb-5 -mx-2 sm:-mx-12 md:mb0 md:mx-0 {% if loop.index % 2 == 0 %}md:pl-10 lg:pl-16{% else %}md:pr-10 lg:pr-16{% endif %}">
-            <img src="{{ project.image.url }}" alt="{{ project.image.alt }}" class="project__image rounded md:rounded-lg shadow-lg md:shadow-xl lg:shadow-2xl {% if loop.index % 2 == 0 %}float-left{% else %}float-right{% endif %}" loading="lazy" />
+          <div class="md:w-3/5 mb-5 -mx-2 md:mb0 md:mx-0 {% if loop.index % 2 == 0 %}md:pl-10 lg:pl-16{% else %}md:pr-10 lg:pr-16{% endif %}">
+            <img src="{{ project.image.url }}" alt="{{ project.image.alt }}" class="project__image rounded lg:rounded-lg shadow-lg md:shadow-xl lg:shadow-2xl {% if loop.index % 2 == 0 %}float-left{% else %}float-right{% endif %}" loading="lazy" />
           </div>
 
           <div class="project__meta md:w-2/5 md:pt-5 lg:pt-16">
