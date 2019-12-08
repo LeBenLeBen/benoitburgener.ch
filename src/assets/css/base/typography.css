@@ -22,7 +22,7 @@ h1,
 .h1,
 h2,
 .h2 {
-  font-family: 'Quarto A', 'Quarto B';
+  font-family: theme('fontFamily.serif');
 }
 
 h1,

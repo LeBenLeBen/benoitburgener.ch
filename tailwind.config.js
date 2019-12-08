@@ -42,6 +42,10 @@ module.exports = {
         '900': 'var(--mint-900)',
       },
     },
+    fontFamily: {
+      sans: '"Verlag A", "Verlag B", sans-serif',
+      serif: '"Quarto A", "Quarto B", serif',
+    },
   },
   variants: {
     margin: ['responsive', 'first'],
@@ -56,7 +60,7 @@ module.exports = {
       addBase({
         html: {
           fontSize: '20px',
-          fontFamily: '"Verlag A", "Verlag B"',
+          fontFamily: config('theme.fontFamily.sans'),
         },
       });
     },
