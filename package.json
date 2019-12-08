@@ -7,7 +7,7 @@
     "watch:files": "eleventy --serve --port=3000",
     "build:styles": "postcss src/assets/css/main.css -o dist/assets/css/main.css",
     "watch:styles": "npm run build:styles -- --watch",
-    "build": "npm-run-all build:*",
+    "build": "NODE_ENV=production npm-run-all build:*",
     "start": "npm-run-all --parallel watch:*"
   },
   "repository": {
