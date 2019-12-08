@@ -7,7 +7,9 @@
 }
 
 .lightness-toggle__icons {
-  transition: all 0.3s cubic-bezier(0.24, 0.82, 0.79, 1.22);
+  .is-ready > & {
+    transition: all 0.3s cubic-bezier(0.24, 0.82, 0.79, 1.22);
+  }
 
   .mode-dark & {
     transform: translateY(-50%);

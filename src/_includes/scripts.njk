@@ -39,6 +39,11 @@
     // 1. See if user has picked a specific theme before from Session Storage
     // 2. Fallback to prefers-color-sheme media query
     setLightnessMode(storedValue ? JSON.parse(storedValue) : mediaQuery.matches, false, toggleBtn);
+
+    // Postpone button transition activation so it doesn't trigger on page load
+    setTimeout(function() {
+      toggleBtn.classList.add('is-ready');
+    });
   });
 })();
 </script>
