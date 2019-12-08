@@ -3,7 +3,20 @@
     "name": "Palette",
     "description": "A tool to create a palette of shades from a given color and export it for Sass, CSS or Sketch.",
     "image": {
-      "url": "/assets/images/projects/palette.png",
+      "sources": [
+        {
+          "srcset": "/assets/images/projects/palette-xl.webp 1200w, /assets/images/projects/palette-lg.webp 1000w, /assets/images/projects/palette-md.webp 800w, /assets/images/projects/palette-sm.webp 600w, /assets/images/projects/palette-xs.webp 400w",
+          "type": "image/webp"
+        },
+        {
+          "srcset": "/assets/images/projects/palette-xl.jpg 1200w, /assets/images/projects/palette-lg.jpg 1000w, /assets/images/projects/palette-md.jpg 800w, /assets/images/projects/palette-sm.jpg 600w, /assets/images/projects/palette-xs.jpg 400w",
+          "type": "image/jpg"
+        }
+      ],
+      "url": "/assets/images/projects/palette-xl.jpg",
+      "sizes": "(min-width: 768px) 52vw, 100vw",
+      "width": 1256,
+      "height": 747,
       "alt": ""
     },
     "url": {
@@ -20,7 +33,20 @@
     "name": "Citations",
     "description": "Previously a React app listing quotes from a Google Spreadsheet, it’s now a Vue app using a Firebase Firestore database.",
     "image": {
-      "url": "/assets/images/projects/quotes.png",
+      "sources": [
+        {
+          "srcset": "/assets/images/projects/quotes-xl.webp 1200w, /assets/images/projects/quotes-lg.webp 1000w, /assets/images/projects/quotes-md.webp 800w, /assets/images/projects/quotes-sm.webp 600w, /assets/images/projects/quotes-xs.webp 400w",
+          "type": "image/webp"
+        },
+        {
+          "srcset": "/assets/images/projects/quotes-xl.jpg 1200w, /assets/images/projects/quotes-lg.jpg 1000w, /assets/images/projects/quotes-md.jpg 800w, /assets/images/projects/quotes-sm.jpg 600w, /assets/images/projects/quotes-xs.jpg 400w",
+          "type": "image/jpg"
+        }
+      ],
+      "url": "/assets/images/projects/quotes-xl.jpg",
+      "sizes": "(min-width: 768px) 52vw, 100vw",
+      "width": 1000,
+      "height": 846,
       "alt": ""
     },
     "url": {
@@ -37,7 +63,20 @@
     "name": "Vertic-Halle",
     "description": "One of my very few clients as a freelance, Vertic-Halle is a company operating multiple climbing centers in Switzerland.",
     "image": {
-      "url": "/assets/images/projects/vertic-halle.png",
+      "sources": [
+        {
+          "srcset": "/assets/images/projects/vertic-halle-xl.webp 1200w, /assets/images/projects/vertic-halle-lg.webp 1000w, /assets/images/projects/vertic-halle-md.webp 800w, /assets/images/projects/vertic-halle-sm.webp 600w, /assets/images/projects/vertic-halle-xs.webp 400w",
+          "type": "image/webp"
+        },
+        {
+          "srcset": "/assets/images/projects/vertic-halle-xl.jpg 1200w, /assets/images/projects/vertic-halle-lg.jpg 1000w, /assets/images/projects/vertic-halle-md.jpg 800w, /assets/images/projects/vertic-halle-sm.jpg 600w, /assets/images/projects/vertic-halle-xs.jpg 400w",
+          "type": "image/jpg"
+        }
+      ],
+      "url": "/assets/images/projects/vertic-halle-xl.jpg",
+      "sizes": "(min-width: 768px) 52vw, 100vw",
+      "width": 1399,
+      "height": 891,
       "alt": ""
     },
     "url": {
@@ -54,7 +93,20 @@
     "name": "Cookr",
     "description": "Cookr is an app I’ve made to have an easy access to my cooking recipes (and incidentally learn Ruby on Rails basics).",
     "image": {
-      "url": "/assets/images/projects/cookr.png",
+      "sources": [
+        {
+          "srcset": "/assets/images/projects/cookr-xl.webp 1200w, /assets/images/projects/cookr-lg.webp 1000w, /assets/images/projects/cookr-md.webp 800w, /assets/images/projects/cookr-sm.webp 600w, /assets/images/projects/cookr-xs.webp 400w",
+          "type": "image/webp"
+        },
+        {
+          "srcset": "/assets/images/projects/cookr-xl.jpg 1200w, /assets/images/projects/cookr-lg.jpg 1000w, /assets/images/projects/cookr-md.jpg 800w, /assets/images/projects/cookr-sm.jpg 600w, /assets/images/projects/cookr-xs.jpg 400w",
+          "type": "image/jpg"
+        }
+      ],
+      "url": "/assets/images/projects/cookr-xl.jpg",
+      "sizes": "(min-width: 768px) 52vw, 100vw",
+      "width": 1200,
+      "height": 904,
       "alt": ""
     },
     "url": {
@@ -71,7 +123,20 @@
     "name": "Kanbasu",
     "description": "A lightweight CSS framework written in Sass I’ve created with my colleagues at Liip.",
     "image": {
-      "url": "/assets/images/projects/kanbasu.png",
+      "sources": [
+        {
+          "srcset": "/assets/images/projects/kanbasu-xl.webp 1200w, /assets/images/projects/kanbasu-lg.webp 1000w, /assets/images/projects/kanbasu-md.webp 800w, /assets/images/projects/kanbasu-sm.webp 600w, /assets/images/projects/kanbasu-xs.webp 400w",
+          "type": "image/webp"
+        },
+        {
+          "srcset": "/assets/images/projects/kanbasu-xl.jpg 1200w, /assets/images/projects/kanbasu-lg.jpg 1000w, /assets/images/projects/kanbasu-md.jpg 800w, /assets/images/projects/kanbasu-sm.jpg 600w, /assets/images/projects/kanbasu-xs.jpg 400w",
+          "type": "image/jpg"
+        }
+      ],
+      "url": "/assets/images/projects/kanbasu-xl.jpg",
+      "sizes": "(min-width: 768px) 52vw, 100vw",
+      "width": 1200,
+      "height": 744,
       "alt": ""
     },
     "url": {

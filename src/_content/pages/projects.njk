@@ -13,7 +13,12 @@ layout: default.njk
       {% for project in projects %}
         <article class="project flex flex-col {% if loop.index % 2 == 0 %}md:flex-row-reverse md:text-right{% else %}md:flex-row{% endif %} mt-10 first:mt-0" style="--project-color-light: {{ project.color.light }}; --project-color-dark: {{ project.color.dark }};">
           <div class="md:w-3/5 mb-5 -mx-2 md:mb0 md:mx-0 {% if loop.index % 2 == 0 %}md:pl-10 lg:pl-16{% else %}md:pr-10 lg:pr-16{% endif %}">
-            <img src="{{ project.image.url }}" alt="{{ project.image.alt }}" class="project__image rounded lg:rounded-lg shadow-lg md:shadow-xl lg:shadow-2xl {% if loop.index % 2 == 0 %}float-left{% else %}float-right{% endif %}" loading="lazy" />
+            <picture>
+              {% for source in project.image.sources %}
+                <source srcset="{{ source.srcset }}" type="{{ source.type }}"{% if project.image.sizes %} sizes="{{ project.image.sizes }}"{% endif %}>
+              {% endfor %}
+              <img src="{{ project.image.url }}" alt="{{ project.image.alt }}" class="project__image rounded lg:rounded-lg shadow-lg md:shadow-xl lg:shadow-2xl {% if loop.index % 2 == 0 %}float-left{% else %}float-right{% endif %}" width="{{ project.image.width }}" height="{{ project.image.height }}" loading="lazy" />
+            </picture>
           </div>
 
           <div class="project__meta md:w-2/5 md:pt-5 lg:pt-16">
