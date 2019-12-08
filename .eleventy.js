@@ -13,6 +13,7 @@ module.exports = function(eleventy) {
   // Minify HTML output
   eleventy.addTransform('minify', require('./lib/transforms/minify.js'));
 
+  eleventy.addPassthroughCopy('./src/favicon.ico');
   eleventy.addPassthroughCopy('./src/assets/images');
   eleventy.addPassthroughCopy('./src/assets/icons');
 
