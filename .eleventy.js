@@ -16,6 +16,7 @@ module.exports = function(eleventy) {
   eleventy.addPassthroughCopy('./src/favicon.ico');
   eleventy.addPassthroughCopy('./src/assets/images');
   eleventy.addPassthroughCopy('./src/assets/icons');
+  eleventy.addPassthroughCopy('./src/assets/fonts');
 
   return {
     dir: {
