@@ -1,5 +1,9 @@
 <script type="text/javascript">
 (function(){
+  if('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js');
+  }
+
   function setLightnessMode(isDark, save, toggleBtn) {
     if (isDark) {
       document.documentElement.classList.add('mode-dark');
