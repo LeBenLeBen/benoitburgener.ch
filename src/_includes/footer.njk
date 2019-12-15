@@ -6,7 +6,7 @@
     <ul role="presentation" class="flex justify-between mt-4 sm:mt-0">
       {% for link in links %}
         <li role="presentation" class="ml-5 md:ml-6 lg:ml-8 first:ml-0">
-          <a href="{{ link.url }}" aria-label="{{ link.label }}" title="{{ link.label }}">
+          <a href="{{ link.url }}" aria-label="{{ link.label }}" title="{{ link.label }}" class="block">
             {{ icon(link.icon, 'icon--100 md:icon--150') }}
           </a>
         </li>
