@@ -1,5 +1,10 @@
 [
   {
+    "date": "2020",
+    "title": "Created <a href=\"https://chusho.dev/\">Chūshō</a>",
+    "description": "A library of bare accessible Vue.js components and tools written in TypeScript"
+  },
+  {
     "date": "2019",
     "title": "Reduced my working time to 80%",
     "description": "Having more time for personal projects and open-source"
