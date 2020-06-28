@@ -43,8 +43,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: '"Verlag A", "Verlag B", sans-serif',
-      serif: '"Quarto A", "Quarto B", serif',
+      sans: 'MP, sans-serif',
+      serif: 'BP, serif',
     },
   },
   variants: {
@@ -56,7 +56,7 @@ module.exports = {
     container: false,
   },
   plugins: [
-    function({ addBase, config }) {
+    function ({ addBase, config }) {
       addBase({
         html: {
           fontSize: '20px',

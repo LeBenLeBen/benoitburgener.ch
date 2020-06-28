@@ -17,7 +17,7 @@ containerClass: container--sm
           <div class="text-mint-700 dark:text-mint-500">{{ talk.date }}</div>
         </div>
         <div class="sm:w-4/5 sm:pl-10 md:pl-16">
-          <div class="font-bold text-lg leading-snug mb-1">
+          <div class="font-medium text-lg leading-snug mb-1">
             {% if talk.event.url %}
               <a href="{{ talk.event.url }}">{{ talk.event.name }}</a>
             {% else %}
@@ -59,17 +59,17 @@ containerClass: container--sm
         <div class="sm:w-1/5 sm:text-right">
           <div class="text-mint-700 dark:text-mint-500">{{ conference.date }}</div>
         </div>
-        <div class="sm:w-2/5 sm:pl-10 md:pl-16">
-          <div class="font-bold text-lg leading-snug mb-1">
+        <div class="sm:w-4/5 sm:pl-10 md:pl-16">
+          <div class="font-medium text-lg leading-snug mb-1">
             {% if conference.event.url %}
               <a href="{{ conference.event.url }}">{{ conference.event.name }}</a>
             {% else %}
               {{ conference.event.name }}
             {% endif %}
           </div>
-        </div>
-        <div class="sm:w-2/5 sm:pl-10 md:pl-16 text-gray-700 dark:text-gray-600">
-          {{ conference.location }}
+          <div class="text-gray-700 dark:text-gray-600">
+            {{ conference.location }}
+          </div>
         </div>
       </article>
     {% endfor %}

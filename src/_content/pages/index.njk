@@ -18,9 +18,9 @@ layout: default.njk
       </div>
     </div>
     <div class="max-w-xl">
-      <div class="text-gray-700 italic">Hello, my name is</div>
+      <div class="text-gray-700">Hello, my name is</div>
       <h1 class="my-1">Benoît Burgener</h1>
-      <p class="text-xl md:text-2xl leading-tight italic">I’m a front-end developer from Switzerland, currently working at <a href="https://www.liip.ch/">Liip</a> in Lausanne.</p>
+      <p class="text-xl md:text-2xl leading-tight font-medium">I’m a front-end developer from Switzerland, currently working at <a href="https://www.liip.ch/">Liip</a> in Lausanne.</p>
       <p class="text-gray-700 mt-4">I’ve been designing and coding websites for quite some time now. After creating my first web page around 2001 — with one of these free generators you could find online — I quickly learned the fundamentals of HTML & CSS.</p>
       <p class="text-gray-700 mt-4">Knowing early this was an activity I enjoyed, it allowed me to shape my studies around development and creation. I learned a lot during my apprenticeship and even more later in various positions as a freelance or in start-ups and agencies.</p>
       <p class="text-gray-700 mt-4">Today I do my best to craft meaningful, performant and accessible experiences; my current favorites being components libraries and web apps development with Vue.js.</p>
@@ -46,7 +46,7 @@ layout: default.njk
             <div class="text-mint-700 dark:text-mint-500">{{ event.date }}</div>
           </div>
           <div class="sm:w-4/5 sm:pl-10 md:pl-16">
-            <div class="font-bold text-lg leading-snug mb-1">
+            <div class="font-medium text-lg leading-snug mb-1">
               {{ event.title | safe }}
             </div>
             {% if event.description %}
