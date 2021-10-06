@@ -1,5 +1,13 @@
 [
   {
+    "date": "August 2021",
+    "event": {
+      "name": "Front Conference",
+      "url": "https://frontconference.com/"
+    },
+    "location": "Zürich, Switzerland"
+  },
+  {
     "date": "Feb 2020",
     "event": {
       "name": "Vue.js Amsterdam",
