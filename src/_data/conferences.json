@@ -1,6 +1,14 @@
 [
   {
-    "date": "August 2021",
+    "date": "Sept 2022",
+    "event": {
+      "name": "SmashingConf",
+      "url": "https://smashingconf.com/"
+    },
+    "location": "Freiburg, Deutschland"
+  },
+  {
+    "date": "Aug 2021",
     "event": {
       "name": "Front Conference",
       "url": "https://frontconference.com/"
