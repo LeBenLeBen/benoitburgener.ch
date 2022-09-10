@@ -13,7 +13,7 @@ layout: default.njk
         <picture>
           <source srcset="/assets/images/memoji.webp" type="image/webp">
           <source srcset="/assets/images/memoji.png" type="image/png">
-          <img src="/assets/images/memoji.png" alt="" class="memoji__img">
+          <img src="/assets/images/memoji.png" alt="" class="memoji__img" width="347" height="443">
         </picture>
       </div>
     </div>
@@ -43,7 +43,7 @@ layout: default.njk
       {% for event in timeline %}
         <article class="timeline__event flex flex-col sm:flex-row sm:items-baseline pb-6">
           <div class="sm:w-1/5 sm:text-right">
-            <div class="text-mint-700 dark:text-mint-500">{{ event.date }}</div>
+            <div class="text-mint-800 dark:text-mint-500">{{ event.date }}</div>
           </div>
           <div class="sm:w-4/5 sm:pl-10 md:pl-16">
             <div class="font-medium text-lg leading-snug mb-1">
