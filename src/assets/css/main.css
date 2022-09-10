@@ -13,7 +13,7 @@
 @import 'components/lightness-toggle';
 
 @import 'tailwindcss/utilities';
-@import 'tailwindcss/screens';
+@import 'tailwindcss/variants';
 
 :root {
   --gray-100: #f7fafc;
@@ -49,7 +49,7 @@
   --white: #ffffff;
 }
 
-.mode-dark {
+.dark {
   --gray-900: #edf2f7;
   --gray-800: #e2e8f0;
   --gray-700: #cbd5e0;

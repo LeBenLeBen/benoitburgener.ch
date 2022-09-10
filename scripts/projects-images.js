@@ -30,12 +30,12 @@ const sizes = [
   },
 ];
 
-glob('src/assets/images/projects/**.png', {}, function(er, files) {
-  files.forEach(file => {
+glob('src/assets/images/projects/**.png', {}, function (er, files) {
+  files.forEach((file) => {
     const image = sharp(file);
     const { dir, name } = path.parse(file);
 
-    sizes.forEach(size => {
+    sizes.forEach((size) => {
       const resizedImage = image.resize({ width: size.width });
       resizedImage
         .jpeg({

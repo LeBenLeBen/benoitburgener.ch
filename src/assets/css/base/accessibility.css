@@ -1,5 +1,7 @@
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
+@layer base {
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+    }
   }
 }

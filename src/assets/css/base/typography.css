@@ -5,6 +5,7 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+  ascent-override: 85%;
 }
 
 @font-face {
@@ -14,6 +15,7 @@
   font-weight: 500;
   font-style: normal;
   font-display: swap;
+  ascent-override: 85%;
 }
 
 @font-face {
@@ -23,6 +25,7 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
+  ascent-override: 85%;
 }
 
 @font-face {
@@ -34,138 +37,141 @@
   font-display: swap;
 }
 
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-  color: theme('colors.blue.700');
-  font-family: inherit;
+@layer base {
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6 {
+    color: theme('colors.blue.700');
+    font-family: inherit;
 
-  .mode-dark & {
-    color: theme('colors.blue.500');
-  }
-}
-
-h1,
-.h1,
-h2,
-.h2 {
-  font-family: theme('fontFamily.serif');
-}
-
-h1,
-.h1 {
-  padding-bottom: 0.2em;
-  padding-right: 0.1em;
-
-  font-size: 2.4em;
-  font-weight: 800;
-  line-height: 0.9;
-
-  @screen md {
-    font-size: 3.8em;
+    .dark & {
+      color: theme('colors.blue.500');
+    }
   }
 
-  @supports (-webkit-text-fill-color: transparent) {
-    width: max-content;
-    background-image: linear-gradient(
-      to right,
-      theme('colors.blue.700'),
-      theme('colors.mint.600')
-    );
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  h1,
+  .h1,
+  h2,
+  .h2 {
+    font-family: theme('fontFamily.serif');
+  }
 
-    .mode-dark & {
+  h1,
+  .h1 {
+    padding-bottom: 0.2em;
+    padding-right: 0.1em;
+
+    font-size: 2.4em;
+    font-weight: 800;
+    line-height: 0.9;
+    text-indent: -0.04em;
+
+    @screen md {
+      font-size: 3.8em;
+    }
+
+    @supports (-webkit-text-fill-color: transparent) {
+      width: max-content;
       background-image: linear-gradient(
         to right,
-        theme('colors.blue.500'),
-        theme('colors.mint.400')
+        theme('colors.blue.700'),
+        theme('colors.mint.600')
       );
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+
+      .dark & {
+        background-image: linear-gradient(
+          to right,
+          theme('colors.blue.500'),
+          theme('colors.mint.400')
+        );
+      }
     }
   }
-}
 
-h2,
-.h2 {
-  font-size: 2em;
-  font-weight: 800;
-  line-height: 0.9;
-
-  @screen md {
-    font-size: 3.15em;
-  }
-}
-
-h3,
-.h3 {
-  font-size: 1.75em;
-  font-weight: bold;
-  line-height: 0.9;
-
-  @screen md {
+  h2,
+  .h2 {
     font-size: 2em;
-  }
-}
+    font-weight: 800;
+    line-height: 0.9;
 
-h4,
-.h4 {
-  font-size: 1.44em;
-  font-weight: bold;
-
-  @screen md {
-    font-size: 3.157em;
-  }
-}
-
-h5,
-.h5 {
-  font-size: 1.2em;
-  font-weight: bold;
-
-  @screen md {
-    font-size: 1.25em;
-  }
-}
-
-a {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-decoration-color: theme('colors.gray.500');
-
-  transition: all 0.1s ease-out;
-
-  -webkit-tap-highlight-color: transparent;
-
-  &:hover,
-  &:focus {
-    color: theme('colors.mint.600');
-    text-decoration-color: theme('colors.mint.300');
-    text-decoration-thickness: 4px;
-
-    .mode-dark & {
-      color: theme('colors.mint.500');
-      text-decoration-color: theme('colors.mint.200');
+    @screen md {
+      font-size: 3.15em;
     }
   }
-}
 
-::selection {
-  color: white;
-  -webkit-text-fill-color: white;
-  background-color: theme('colors.mint.800');
+  h3,
+  .h3 {
+    font-size: 1.75em;
+    font-weight: bold;
+    line-height: 0.9;
 
-  .mode-dark & {
-    color: theme('colors.gray.700');
-    -webkit-text-fill-color: theme('colors.gray.200');
-    background-color: theme('colors.mint.500');
+    @screen md {
+      font-size: 2em;
+    }
+  }
+
+  h4,
+  .h4 {
+    font-size: 1.44em;
+    font-weight: bold;
+
+    @screen md {
+      font-size: 3.157em;
+    }
+  }
+
+  h5,
+  .h5 {
+    font-size: 1.2em;
+    font-weight: bold;
+
+    @screen md {
+      font-size: 1.25em;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: theme('colors.gray.500');
+
+    transition: all 0.1s ease-out;
+
+    -webkit-tap-highlight-color: transparent;
+
+    &:hover,
+    &:focus {
+      color: theme('colors.mint.600');
+      text-decoration-color: theme('colors.mint.300');
+      text-decoration-thickness: 4px;
+
+      .dark & {
+        color: theme('colors.mint.500');
+        text-decoration-color: theme('colors.mint.200');
+      }
+    }
+  }
+
+  ::selection {
+    color: white;
+    -webkit-text-fill-color: white;
+    background-color: theme('colors.mint.800');
+
+    .dark & {
+      color: theme('colors.gray.700');
+      -webkit-text-fill-color: theme('colors.gray.200');
+      background-color: theme('colors.mint.500');
+    }
   }
 }

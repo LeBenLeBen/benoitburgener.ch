@@ -2,7 +2,7 @@
 
 ## Development
 
-Requires Node.js 12
+Requires Node.js, see .nvmrc for current version
 
 ```sh
 # Install dependencies

@@ -6,12 +6,12 @@
 
   function setLightnessMode(isDark, save, toggleBtn) {
     if (isDark) {
-      document.documentElement.classList.add('mode-dark');
+      document.documentElement.classList.add('dark');
       var title = 'Disable dark mode';
       toggleBtn.setAttribute('aria-label', title);
       toggleBtn.setAttribute('title', title);
     } else {
-      document.documentElement.classList.remove('mode-dark');
+      document.documentElement.classList.remove('dark');
       var title = 'Enable dark mode';
       toggleBtn.setAttribute('aria-label', title);
       toggleBtn.setAttribute('title', title);
@@ -29,7 +29,7 @@
   // Enable toggle button interactivity
     var toggleBtn = document.querySelector('#lightnessToggle');
     toggleBtn.addEventListener('click', function() {
-      setLightnessMode(!document.documentElement.classList.contains('mode-dark'), true, toggleBtn);
+      setLightnessMode(!document.documentElement.classList.contains('dark'), true, toggleBtn);
     });
 
     // Listen to OS mode change only if user didn't explicitly pick a theme earlier

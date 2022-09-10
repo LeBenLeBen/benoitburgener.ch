@@ -1,6 +1,6 @@
 const Nunjucks = require('nunjucks');
 
-module.exports = function(eleventy) {
+module.exports = function (eleventy) {
   eleventy.setBrowserSyncConfig(require('./browser-sync.config.js'));
 
   let nunjucksEnvironment = new Nunjucks.Environment(

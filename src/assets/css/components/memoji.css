@@ -1,64 +1,66 @@
-.memoji {
-  float: right;
-  width: 42vw;
-  max-width: 400px;
-  margin-top: -40px;
-  margin-right: -35px;
-  margin-bottom: 4%;
-  margin-left: -50px;
+@layer components {
+  .memoji {
+    float: right;
+    width: 42vw;
+    max-width: 400px;
+    margin-top: -40px;
+    margin-right: -35px;
+    margin-bottom: 4%;
+    margin-left: -50px;
 
-  position: relative;
-  z-index: -1;
-}
-
-.memoji__inner {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  width: 100%;
-  padding-top: calc(100% - 12px);
-  overflow: hidden;
-
-  position: relative;
-
-  background-image: linear-gradient(
-    90deg,
-    theme('colors.gray.300'),
-    theme('colors.gray.100')
-  );
-  border: 6px solid theme('colors.gray.300');
-  border-radius: 50%;
-  box-shadow: 8px 15px 20px rgba(0, 0, 0, 0.05);
-  animation: floating 3s ease-out infinite alternate-reverse;
-
-  will-change: transform;
-
-  @screen sm {
-    padding-top: calc(100% - 24px);
-    border-width: 12px;
+    position: relative;
+    z-index: -1;
   }
 
-  @screen md {
-    padding-top: calc(100% - 32px);
-    border-width: 16px;
+  .memoji__inner {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    padding-top: calc(100% - 12px);
+    overflow: hidden;
+
+    position: relative;
+
+    background-image: linear-gradient(
+      90deg,
+      theme('colors.gray.300'),
+      theme('colors.gray.100')
+    );
+    border: 6px solid theme('colors.gray.300');
+    border-radius: 50%;
+    box-shadow: 8px 15px 20px rgba(0, 0, 0, 0.05);
+    animation: floating 3s ease-out infinite alternate-reverse;
+
+    will-change: transform;
+
+    @screen sm {
+      padding-top: calc(100% - 24px);
+      border-width: 12px;
+    }
+
+    @screen md {
+      padding-top: calc(100% - 32px);
+      border-width: 16px;
+    }
   }
-}
 
-.memoji__img {
-  display: block;
-  width: auto;
-  height: 90%;
+  .memoji__img {
+    display: block;
+    width: auto;
+    height: 90%;
 
-  position: absolute;
-  right: 0;
-  bottom: -3px;
-  left: 50%;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    left: 50%;
 
-  transform: translateX(-50%);
-}
+    transform: translateX(-50%);
+  }
 
-@keyframes floating {
-  100% {
-    transform: translateY(4%) rotate(0.1deg);
+  @keyframes floating {
+    100% {
+      transform: translateY(4%) rotate(0.1deg);
+    }
   }
 }

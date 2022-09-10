@@ -1,54 +1,56 @@
-.project {
-}
-
-.project__image {
-  max-width: 100%;
-
-  @screen md {
-    max-width: 52vw;
+@layer components {
+  .project {
   }
-}
 
-.project__meta {
-  position: relative;
+  .project__image {
+    max-width: 100%;
 
-  @screen md {
-    &::before {
-      content: '';
-      width: 120%;
-      height: 120%;
+    @screen md {
+      max-width: 52vw;
+    }
+  }
 
-      position: absolute;
-      top: 0;
-      left: -30%;
-      z-index: -2;
+  .project__meta {
+    position: relative;
 
-      background-image: url('/assets/images/bubble-1.svg');
-      background-position: 120% 0;
-      background-repeat: no-repeat;
-      background-size: contain;
+    @screen md {
+      &::before {
+        content: '';
+        width: 120%;
+        height: 120%;
 
-      .mode-dark & {
-        background-image: url('/assets/images/bubble-1-dark.svg');
-      }
+        position: absolute;
+        top: 0;
+        left: -30%;
+        z-index: -2;
 
-      .project:nth-child(even) & {
-        left: auto;
-        right: -30%;
-        background-image: url('/assets/images/bubble-2.svg');
+        background-image: url('/assets/images/bubble-1.svg');
+        background-position: 120% 0;
+        background-repeat: no-repeat;
+        background-size: contain;
 
-        .mode-dark & {
-          background-image: url('/assets/images/bubble-2-dark.svg');
+        .dark & {
+          background-image: url('/assets/images/bubble-1-dark.svg');
+        }
+
+        .project:nth-child(even) & {
+          left: auto;
+          right: -30%;
+          background-image: url('/assets/images/bubble-2.svg');
+
+          .dark & {
+            background-image: url('/assets/images/bubble-2-dark.svg');
+          }
         }
       }
     }
   }
-}
 
-.project__title {
-  color: var(--project-color-light);
+  .project__title {
+    color: var(--project-color-light);
 
-  .mode-dark & {
-    color: var(--project-color-dark);
+    .dark & {
+      color: var(--project-color-dark);
+    }
   }
 }

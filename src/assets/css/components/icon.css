@@ -1,13 +1,13 @@
-.icon {
-  display: inline-block;
-  vertical-align: middle;
-  pointer-events: none;
+@layer components {
+  .icon {
+    display: inline-block;
+    vertical-align: middle;
+    pointer-events: none;
 
-  fill: currentColor;
-  will-change: transform; /* Prevent cropped/blurry icons on Firefox */
-}
+    fill: currentColor;
+    will-change: transform; /* Prevent cropped/blurry icons on Firefox */
+  }
 
-@responsive {
   .icon--75 {
     width: 18px;
     height: 18px;

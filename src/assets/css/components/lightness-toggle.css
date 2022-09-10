@@ -1,17 +1,19 @@
-.lightness-toggle {
-  display: flex;
-  flex-direction: column;
-  width: 24px;
-  height: 24px;
-  overflow: hidden;
-}
-
-.lightness-toggle__icons {
-  .is-ready > & {
-    transition: all 0.3s cubic-bezier(0.24, 0.82, 0.79, 1.22);
+@layer components {
+  .lightness-toggle {
+    display: flex;
+    flex-direction: column;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
   }
 
-  .mode-dark & {
-    transform: translateY(-50%);
+  .lightness-toggle__icons {
+    .is-ready > & {
+      transition: all 0.3s cubic-bezier(0.24, 0.82, 0.79, 1.22);
+    }
+
+    .dark & {
+      transform: translateY(-50%);
+    }
   }
 }
