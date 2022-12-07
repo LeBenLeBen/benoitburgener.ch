@@ -1,5 +1,35 @@
 [
   {
+    "name": "Cookr",
+    "description": "Cookr is an app I’ve made to have an easy access to my cooking recipes.",
+    "image": {
+      "sources": [
+        {
+          "srcset": "/assets/images/projects/cookr-xl.webp 1200w, /assets/images/projects/cookr-lg.webp 1000w, /assets/images/projects/cookr-md.webp 800w, /assets/images/projects/cookr-sm.webp 600w, /assets/images/projects/cookr-xs.webp 400w",
+          "type": "image/webp"
+        },
+        {
+          "srcset": "/assets/images/projects/cookr-xl.jpg 1200w, /assets/images/projects/cookr-lg.jpg 1000w, /assets/images/projects/cookr-md.jpg 800w, /assets/images/projects/cookr-sm.jpg 600w, /assets/images/projects/cookr-xs.jpg 400w",
+          "type": "image/jpg"
+        }
+      ],
+      "url": "/assets/images/projects/cookr-xl.jpg",
+      "sizes": "(min-width: 768px) 52vw, 100vw",
+      "width": 1200,
+      "height": 904,
+      "alt": ""
+    },
+    "url": {
+      "label": "cookr.ch",
+      "link": "https://www.cookr.ch/"
+    },
+    "tags": ["Strapi", "Vue.js", "Tailwind"],
+    "color": {
+      "light": "#d45d79",
+      "dark": "#d45d79"
+    }
+  },
+  {
     "name": "Palette",
     "description": "A tool to create a palette of shades from a given color and export it for Sass, CSS or Sketch.",
     "image": {
@@ -87,36 +117,6 @@
     "color": {
       "light": "#774593",
       "dark": "#916CA8"
-    }
-  },
-  {
-    "name": "Cookr",
-    "description": "Cookr is an app I’ve made to have an easy access to my cooking recipes (and incidentally learn Ruby on Rails basics).",
-    "image": {
-      "sources": [
-        {
-          "srcset": "/assets/images/projects/cookr-xl.webp 1200w, /assets/images/projects/cookr-lg.webp 1000w, /assets/images/projects/cookr-md.webp 800w, /assets/images/projects/cookr-sm.webp 600w, /assets/images/projects/cookr-xs.webp 400w",
-          "type": "image/webp"
-        },
-        {
-          "srcset": "/assets/images/projects/cookr-xl.jpg 1200w, /assets/images/projects/cookr-lg.jpg 1000w, /assets/images/projects/cookr-md.jpg 800w, /assets/images/projects/cookr-sm.jpg 600w, /assets/images/projects/cookr-xs.jpg 400w",
-          "type": "image/jpg"
-        }
-      ],
-      "url": "/assets/images/projects/cookr-xl.jpg",
-      "sizes": "(min-width: 768px) 52vw, 100vw",
-      "width": 1200,
-      "height": 904,
-      "alt": ""
-    },
-    "url": {
-      "label": "cookr.ch",
-      "link": "https://www.cookr.ch/"
-    },
-    "tags": ["Ruby on Rails", "Vue.js", "Kanbasu"],
-    "color": {
-      "light": "#d45d79",
-      "dark": "#d45d79"
     }
   },
   {
