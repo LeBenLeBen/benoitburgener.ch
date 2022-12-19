@@ -2,17 +2,22 @@
   {
     "label": "Find me on GitHub",
     "icon": "github",
-    "url": "https://github.com/lebenleben/"
+    "url": "https://github.com/lebenleben"
+  },
+  {
+    "label": "Find me on Mastodon",
+    "icon": "mastodon",
+    "url": "https://mastodon.social/@leben"
   },
   {
     "label": "Find me on Twitter",
     "icon": "twitter",
-    "url": "https://twitter.com/lebenleben/"
+    "url": "https://twitter.com/lebenleben"
   },
   {
     "label": "Find me on Instagram",
     "icon": "instagram",
-    "url": "https://www.instagram.com/lebenlebenleben/"
+    "url": "https://www.instagram.com/lebenlebenleben"
   },
   {
     "label": "Find me on Product Hunt",
