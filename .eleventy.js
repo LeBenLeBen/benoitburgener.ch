@@ -1,7 +1,10 @@
 const Nunjucks = require('nunjucks');
 
 module.exports = function (eleventy) {
-  eleventy.setBrowserSyncConfig(require('./browser-sync.config.js'));
+  eleventy.setServerOptions({
+    watch: ['dist/**/*'],
+    port: 3000,
+  });
 
   let nunjucksEnvironment = new Nunjucks.Environment(
     new Nunjucks.FileSystemLoader(['src/_includes', 'src/_layouts'], {
