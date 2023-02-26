@@ -8,7 +8,7 @@
       <ul class="flex items-center gap-3 sm:gap-4 md:gap-5 lg:gap-5 text-sm md:text-base">
         {% for item in navigation.primary %}
           <li>
-            <a href="{{ item.url }}" class="no-underline{% if page.url == item.url %} font-bold{% endif %}" {% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
+            <a href="{{ item.url }}" class="{{ classNames('no-underline', { 'font-bold': page.url == item.url }) }}" {% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
           </li>
         {% endfor %}
         <li>

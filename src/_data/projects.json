@@ -1,23 +1,28 @@
 [
   {
+    "name": "Chūshō",
+    "description": "A open-source library of unstyled and accessible UI components for Vue.js.",
+    "image": {
+      "url": "projects/chusho.png",
+      "urlDark": "projects/chusho-dark.png",
+      "alt": "Screenshot of the Chūshō documentation website homepage, showing the library features."
+    },
+    "url": {
+      "label": "chusho.dev",
+      "link": "https://www.chusho.dev/"
+    },
+    "tags": ["Vue.js"],
+    "color": {
+      "light": "#DF8E11",
+      "dark": "#DF8E11"
+    }
+  },
+  {
     "name": "Cookr",
     "description": "Cookr is an app I’ve made to have an easy access to my cooking recipes.",
     "image": {
-      "sources": [
-        {
-          "srcset": "/assets/images/projects/cookr-xl.webp 1200w, /assets/images/projects/cookr-lg.webp 1000w, /assets/images/projects/cookr-md.webp 800w, /assets/images/projects/cookr-sm.webp 600w, /assets/images/projects/cookr-xs.webp 400w",
-          "type": "image/webp"
-        },
-        {
-          "srcset": "/assets/images/projects/cookr-xl.jpg 1200w, /assets/images/projects/cookr-lg.jpg 1000w, /assets/images/projects/cookr-md.jpg 800w, /assets/images/projects/cookr-sm.jpg 600w, /assets/images/projects/cookr-xs.jpg 400w",
-          "type": "image/jpg"
-        }
-      ],
-      "url": "/assets/images/projects/cookr-xl.jpg",
-      "sizes": "(min-width: 768px) 52vw, 100vw",
-      "width": 1200,
-      "height": 904,
-      "alt": ""
+      "url": "projects/cookr.png",
+      "alt": "Screenshot of a Cookr recipe page for mulled wine, embedding a large picture of wine in a pan with orange slices, surrounded by the ingredients and steps."
     },
     "url": {
       "label": "cookr.ch",
@@ -33,21 +38,8 @@
     "name": "Palette",
     "description": "A tool to create a palette of shades from a given color and export it for Sass, CSS or Sketch.",
     "image": {
-      "sources": [
-        {
-          "srcset": "/assets/images/projects/palette-xl.webp 1200w, /assets/images/projects/palette-lg.webp 1000w, /assets/images/projects/palette-md.webp 800w, /assets/images/projects/palette-sm.webp 600w, /assets/images/projects/palette-xs.webp 400w",
-          "type": "image/webp"
-        },
-        {
-          "srcset": "/assets/images/projects/palette-xl.jpg 1200w, /assets/images/projects/palette-lg.jpg 1000w, /assets/images/projects/palette-md.jpg 800w, /assets/images/projects/palette-sm.jpg 600w, /assets/images/projects/palette-xs.jpg 400w",
-          "type": "image/jpg"
-        }
-      ],
-      "url": "/assets/images/projects/palette-xl.jpg",
-      "sizes": "(min-width: 768px) 52vw, 100vw",
-      "width": 1256,
-      "height": 747,
-      "alt": ""
+      "url": "projects/palette.png",
+      "alt": "Screenshot of the tool showing two color palettes, each displaying 10 shades with sliders to adjust the saturation and lightness."
     },
     "url": {
       "label": "lebenleben.github.io/palette",
@@ -63,21 +55,8 @@
     "name": "Citations",
     "description": "Previously a React app listing quotes from a Google Spreadsheet, it’s now a Vue app using a Firebase Firestore database.",
     "image": {
-      "sources": [
-        {
-          "srcset": "/assets/images/projects/quotes-xl.webp 1200w, /assets/images/projects/quotes-lg.webp 1000w, /assets/images/projects/quotes-md.webp 800w, /assets/images/projects/quotes-sm.webp 600w, /assets/images/projects/quotes-xs.webp 400w",
-          "type": "image/webp"
-        },
-        {
-          "srcset": "/assets/images/projects/quotes-xl.jpg 1200w, /assets/images/projects/quotes-lg.jpg 1000w, /assets/images/projects/quotes-md.jpg 800w, /assets/images/projects/quotes-sm.jpg 600w, /assets/images/projects/quotes-xs.jpg 400w",
-          "type": "image/jpg"
-        }
-      ],
-      "url": "/assets/images/projects/quotes-xl.jpg",
-      "sizes": "(min-width: 768px) 52vw, 100vw",
-      "width": 1000,
-      "height": 846,
-      "alt": ""
+      "url": "projects/quotes.png",
+      "alt": "Screenshot displaying a bunch of quotes with author and date. Each quote has a different background creating a nice rainbow of colors."
     },
     "url": {
       "label": "github.com/LeBenLeBen/citations",
@@ -93,21 +72,8 @@
     "name": "Vertic-Halle",
     "description": "One of my very few clients as a freelance, Vertic-Halle is a company operating multiple climbing centers in Switzerland.",
     "image": {
-      "sources": [
-        {
-          "srcset": "/assets/images/projects/vertic-halle-xl.webp 1200w, /assets/images/projects/vertic-halle-lg.webp 1000w, /assets/images/projects/vertic-halle-md.webp 800w, /assets/images/projects/vertic-halle-sm.webp 600w, /assets/images/projects/vertic-halle-xs.webp 400w",
-          "type": "image/webp"
-        },
-        {
-          "srcset": "/assets/images/projects/vertic-halle-xl.jpg 1200w, /assets/images/projects/vertic-halle-lg.jpg 1000w, /assets/images/projects/vertic-halle-md.jpg 800w, /assets/images/projects/vertic-halle-sm.jpg 600w, /assets/images/projects/vertic-halle-xs.jpg 400w",
-          "type": "image/jpg"
-        }
-      ],
-      "url": "/assets/images/projects/vertic-halle-xl.jpg",
-      "sizes": "(min-width: 768px) 52vw, 100vw",
-      "width": 1399,
-      "height": 891,
-      "alt": ""
+      "url": "projects/vertic-halle.png",
+      "alt": "Screenshot of the website homepage, showing the logo and main navigation in a dark sidebar on the left. The main content is an introduction to the various climbing centers, with a picture and short description for each."
     },
     "url": {
       "label": "vertic-halle.ch",
@@ -123,21 +89,8 @@
     "name": "Kanbasu",
     "description": "A lightweight CSS framework written in Sass I’ve created with my colleagues at Liip.",
     "image": {
-      "sources": [
-        {
-          "srcset": "/assets/images/projects/kanbasu-xl.webp 1200w, /assets/images/projects/kanbasu-lg.webp 1000w, /assets/images/projects/kanbasu-md.webp 800w, /assets/images/projects/kanbasu-sm.webp 600w, /assets/images/projects/kanbasu-xs.webp 400w",
-          "type": "image/webp"
-        },
-        {
-          "srcset": "/assets/images/projects/kanbasu-xl.jpg 1200w, /assets/images/projects/kanbasu-lg.jpg 1000w, /assets/images/projects/kanbasu-md.jpg 800w, /assets/images/projects/kanbasu-sm.jpg 600w, /assets/images/projects/kanbasu-xs.jpg 400w",
-          "type": "image/jpg"
-        }
-      ],
-      "url": "/assets/images/projects/kanbasu-xl.jpg",
-      "sizes": "(min-width: 768px) 52vw, 100vw",
-      "width": 1200,
-      "height": 744,
-      "alt": ""
+      "url": "projects/kanbasu.png",
+      "alt": "Screenshot of the library website homepage, with instructions on how to install it and a call-to-action to access the documentation."
     },
     "url": {
       "label": "kanbasu.liip.ch",
