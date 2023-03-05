@@ -1,5 +1,6 @@
 const Nunjucks = require('nunjucks');
 const { imageShortcode, classNamesFunction } = require('./extensions.js');
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setServerOptions({
@@ -27,6 +28,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/assets/images');
   eleventyConfig.addPassthroughCopy('./src/assets/icons');
   eleventyConfig.addPassthroughCopy('./src/assets/fonts');
+
+  // Vendor plugins
+  eleventyConfig.addPlugin(syntaxHighlight, {
+    templateFormats: ['md'],
+  });
 
   return {
     dir: {

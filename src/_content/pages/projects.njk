@@ -31,7 +31,7 @@ layout: default.njk
             <ul class="flex flex-wrap {% if loop.index % 2 == 0 %}md:justify-end{% endif %} -ml-3 -mt-1">
               {% for tag in project.tags %}
                 <li class="pl-3 pt-1">
-                  <span class="tag">{{ tag }}</span>
+                  <span class="label">{{ tag }}</span>
                 </li>
               {% endfor %}
             </ul>

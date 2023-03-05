@@ -1,5 +1,5 @@
 @layer components {
-  .tag {
+  .label {
     display: inline-block;
     @apply py-1 px-2;
 

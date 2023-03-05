@@ -2,11 +2,12 @@
 @import 'base/layout';
 @import 'base/typography';
 @import 'base/accessibility';
+@import 'base/syntax';
 
 @import 'tailwindcss/components';
 @import 'components/icon';
 @import 'components/btn';
-@import 'components/tag';
+@import 'components/label';
 @import 'components/memoji';
 @import 'components/project';
 @import 'components/timeline';
