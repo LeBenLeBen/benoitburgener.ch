@@ -1,15 +1,12 @@
 ---
 permalink: feed.xml
 eleventyExcludeFromCollections: true
-metadata:
-  title: "LeBen’s blog"
-  subtitle: "Various thoughts on web development."
 layout: null
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ site.url }}">
-  <title>{{ metadata.title }}</title>
-  <subtitle>{{ metadata.subtitle }}</subtitle>
+  <title>{{ site.title }}</title>
+  <subtitle>{{ site.subtitle }}</subtitle>
   <link href="{{ permalink | absoluteUrl(site.url) }}" rel="self"/>
   <link href="{{ site.url }}"/>
   <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
