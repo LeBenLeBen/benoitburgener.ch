@@ -1,3 +1,8 @@
+:root {
+  --container-max-width: 50rem;
+  --container-gap-base: 1rem;
+}
+
 @layer base {
   .master {
     display: flex;
@@ -26,19 +31,41 @@
   }
 
   .container {
-    max-width: 50rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1em;
-    padding-right: 1em;
+    --_max-width: var(--container-max-width);
+    --container-gap-left: var(--container-gap-base);
+    --container-gap-right: var(--container-gap-base);
 
     @supports (padding: max(0px)) {
-      padding-left: max(1em, env(safe-area-inset-left));
-      padding-right: max(1em, env(safe-area-inset-right));
+      --container-gap-left: max(
+        var(--container-gap-base),
+        env(safe-area-inset-left)
+      );
+      --container-gap-right: max(
+        var(--container-gap-base),
+        env(safe-area-inset-right)
+      );
+    }
+
+    display: grid;
+    grid-template-columns:
+      [full-start] 1fr
+      [gap-start] var(--container-gap-left)
+      [start] minmax(0, var(--_max-width))
+      [end] var(--container-gap-right)
+      [gap-end] 1fr
+      [full-end];
+    width: 100%;
+
+    > * {
+      grid-column: start / end;
     }
   }
 
   .container--sm {
-    max-width: 40rem;
+    --container-max-width: 40rem;
+
+    @media (min-width: 52.5em) {
+      --container-gap-base: 3rem;
+    }
   }
 }

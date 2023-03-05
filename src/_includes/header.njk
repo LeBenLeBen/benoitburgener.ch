@@ -1,25 +1,27 @@
 <header class="site-header">
-  <div class="container flex items-center justify-between pt-3 pb-5 md:pt-4 md:pb-6">
-    <div class="mr-4 font-bold">
-      <a href="/" class="no-underline">LeBen</a>
-    </div>
+  <div class="container">
+    <div class="flex items-center justify-between pt-3 pb-5 md:pt-4 md:pb-6">
+      <div class="mr-4 font-bold">
+        <a href="/" class="no-underline">LeBen</a>
+      </div>
 
-    <nav>
-      <ul class="flex items-center gap-3 sm:gap-4 md:gap-5 lg:gap-5 text-sm md:text-base">
-        {% for item in navigation.primary %}
+      <nav>
+        <ul class="flex items-center gap-3 sm:gap-4 md:gap-5 lg:gap-5 text-sm md:text-base">
+          {% for item in navigation.primary %}
+            <li{% if item.url === '/' %} class="max-xs:hidden"{% endif %}>
+              <a href="{{ item.url }}" class="{{ classNames('no-underline', { 'font-bold': page.url == item.url }) }}" {% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
+            </li>
+          {% endfor %}
           <li>
-            <a href="{{ item.url }}" class="{{ classNames('no-underline', { 'font-bold': page.url == item.url }) }}" {% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
+            <button id="lightness-toggle" class="lightness-toggle btn btn--bare">
+              <div class="lightness-toggle__icons">
+                {{ icon('moon', 'dark-icon icon--100') }}
+                {{ icon('sun', 'light-icon icon--100') }}
+              </div>
+            </button>
           </li>
-        {% endfor %}
-        <li>
-          <button id="lightnessToggle" class="lightness-toggle btn btn--bare">
-            <div class="lightness-toggle__icons">
-              {{ icon('moon', 'dark-icon icon--100') }}
-              {{ icon('sun', 'light-icon icon--100') }}
-            </div>
-          </button>
-        </li>
-      </ul>
-    </nav>
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>
