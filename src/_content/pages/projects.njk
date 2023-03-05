@@ -7,7 +7,7 @@ layout: default.njk
 
 <div class="overflow-hidden pb-12">
   <div class="container">
-    <h1 class="h2 mb-4 md:mb-6 lg:mb-8">{{ title }}</h1>
+    <h1 class="mb-4 md:mb-6 lg:mb-8">{{ title }}</h1>
 
     <div class="projects">
       {% for project in projects %}
@@ -23,7 +23,7 @@ layout: default.njk
           </div>
 
           <div class="project__meta md:w-2/5 md:pt-5 lg:pt-16">
-            <h3 class="project__title mb-1">{{ project.name }}</h3>
+            <h2 class="project__title mb-1">{{ project.name }}</h2>
             <div class="mb-3">
               <a href="{{ project.url.link }}" class="text-gray-600">{{ project.url.label }}</a>
             </div>

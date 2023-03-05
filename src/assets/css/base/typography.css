@@ -51,7 +51,8 @@
   h6,
   .h6 {
     color: theme('colors.blue.700');
-    font-family: inherit;
+    line-height: 0.95;
+    font-weight: bold;
 
     .dark & {
       color: theme('colors.blue.500');
@@ -59,28 +60,17 @@
   }
 
   h1,
-  .h1,
-  h2,
-  .h2 {
-    font-family: theme('fontFamily.serif');
-  }
-
-  h1,
   .h1 {
     padding-bottom: 0.2em;
     padding-right: 0.1em;
 
-    font-size: 2.4em;
+    font-family: theme('fontFamily.serif');
+    font-size: var(--step-5);
     font-weight: 800;
-    line-height: 0.9;
-    text-indent: -0.04em;
-
-    @screen md {
-      font-size: 3.8em;
-    }
+    margin-left: -0.04em;
 
     @supports (-webkit-text-fill-color: transparent) {
-      width: max-content;
+      width: fit-content;
       background-image: linear-gradient(
         to right,
         theme('colors.blue.700'),
@@ -101,44 +91,27 @@
 
   h2,
   .h2 {
-    font-size: 2em;
-    font-weight: 800;
-    line-height: 0.9;
-
-    @screen md {
-      font-size: 3.15em;
-    }
+    font-size: var(--step-4);
   }
 
   h3,
   .h3 {
-    font-size: 1.75em;
-    font-weight: bold;
-    line-height: 0.9;
-
-    @screen md {
-      font-size: 2em;
-    }
+    font-size: var(--step-3);
   }
 
   h4,
   .h4 {
-    font-size: 1.44em;
-    font-weight: bold;
-
-    @screen md {
-      font-size: 3.157em;
-    }
+    font-size: var(--step-2);
   }
 
   h5,
   .h5 {
-    font-size: 1.2em;
-    font-weight: bold;
+    font-size: var(--step-1);
+  }
 
-    @screen md {
-      font-size: 1.25em;
-    }
+  h6,
+  .h6 {
+    font-size: 1rem;
   }
 
   a {
