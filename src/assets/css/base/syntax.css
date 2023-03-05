@@ -9,7 +9,7 @@ pre {
   word-wrap: normal;
   line-height: 1.5;
 
-  tab-size: 4;
+  tab-size: 2;
   hyphens: none;
 }
 
@@ -35,13 +35,14 @@ pre {
 
 :not(pre) > code {
   display: inline-block;
-  padding: 0.15em 0.5em;
+  padding: 0.1em 0.4em;
 
-  color: var(--gray-800);
+  color: var(--mint-800);
   white-space: normal;
 
-  border-radius: 2px;
-  background-color: var(--gray-400);
+  border-radius: 5px;
+  background-color: var(--mint-200);
+  border: 1px solid var(--mint-300);
 }
 
 /*

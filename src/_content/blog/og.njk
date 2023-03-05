@@ -1,0 +1,43 @@
+---
+pagination:
+  data: collections.posts
+  size: 1
+  alias: preview
+permalink: "assets/images/_generated/og/{{ preview.data.title | slug }}-preview.svg"
+eleventyExcludeFromCollections: true
+layout: null
+---
+<svg width="1200" height="628" viewBox="0 0 1200 628" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#195c9f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#29bca1;stop-opacity:1" />
+    </linearGradient>
+
+    <pattern id="wave" patternUnits="userSpaceOnUse" width="100" height="12">
+      <path d="M0 12c8.44 0 13.72-1.21 22.27-4.4L24 6.94C33.64 3.35 39.65 2 50 2s15.36 1.22 24.63 4.93C84.11 10.72 89.44 12 100 12v-2c-10.27 0-15.36-1.22-24.63-4.93C65.89 1.28 60.56 0 50 0S33.14 1.4 23.34 5.06l-1.77.66C13.22 8.84 8.16 10 0 10v2z" fill="#cbd5e0" fill-rule="evenodd"/>
+    </pattern>
+  </defs>
+
+  {% set titleInLines = preview.data.title | splitLines %}
+  {% set numberOfLines = titleInLines.length %}
+  {% set verticalStartingPoint = 500 - (numberOfLines * 80) %}
+
+  <rect width="100%" height="100%" fill="#e2e8f0" />
+
+  <rect x="0" y="540" width="100%" height="36" fill="url(#wave)" />
+
+  <text text-anchor="start" font-family="'Mabry Pro'" font-weight="600" font-size="30" fill="#4a5568">
+    <tspan x="80" y="80">LeBen’s blog</tspan>
+  </text>
+
+  <text id="text" fill="url(#gradient)" font-family="'Brick Display Pro'" font-weight="800" font-size="80">
+    {% for line in titleInLines %}
+    <tspan x="80" y="{{ verticalStartingPoint + loop.index0 * 80 }}">{{line}}</tspan>
+    {% endfor %}
+  </text>
+
+  <text font-family="'Mabry Pro'" font-size="30" font-weight="400" fill="#149f85">
+    <tspan x="80" y="{{ verticalStartingPoint + numberOfLines * 80 - 20 }}">{{ preview.data.date | formatDate }}</tspan>
+  </text>
+</svg>

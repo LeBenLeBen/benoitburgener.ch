@@ -10,6 +10,7 @@
 @import 'components/label';
 @import 'components/memoji';
 @import 'components/project';
+@import 'components/prose';
 @import 'components/timeline';
 @import 'components/lightness-toggle';
 

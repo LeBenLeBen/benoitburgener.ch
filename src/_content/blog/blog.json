@@ -1,0 +1,6 @@
+{
+  "tags": ["posts"],
+  "layout": "post",
+  "containerClass": "container--sm",
+  "permalink": "/blog/{{ title | slugify }}/index.html"
+}

@@ -1,29 +1,35 @@
 {% from "macros.njk" import icon %}
 <!DOCTYPE html>
-<html lang="en" class="antialiased">
+<html lang="{{ site.lang }}" class="antialiased">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
     <title>{% if title %}{{ title }} &middot; {% endif %}{{ site.title }}</title>
     <meta name="description" content="Personal website of a front-end developer living in Switzerland.">
+    <meta property="og:title" content="{% if title %}{{ title }} &middot; {% endif %}{{ site.title }}" />
+    <meta property="og:url" content="{{ page.url }}" />
+
+    {%- block head -%}{%- endblock -%}
 
     <link rel="stylesheet" href="/assets/css/main.css" type="text/css" />
   </head>
 
-  <body class="bg-gray-300 text-gray-800 dark:text-gray-700">
-    <div class="master">
-      {% include "header.njk" %}
+  {% block body %}
+    <body class="bg-gray-300 text-gray-800 dark:text-gray-700">
+      <div class="master">
+        {% include "header.njk" %}
 
-      <main class="main py-6 md:py-8 lg:py-12">
-        {% block main %}
-          {{ content|safe }}
-        {% endblock %}
-      </main>
+        <main class="main py-6 md:py-8 lg:py-12">
+          {% block main %}
+            {{ content|safe }}
+          {% endblock %}
+        </main>
 
-      {% include "footer.njk" %}
-    </div>
+        {% include "footer.njk" %}
+      </div>
 
-    {% include "scripts.njk" %}
-  </body>
+      {% include "scripts.njk" %}
+    </body>
+  {% endblock %}
 </html>

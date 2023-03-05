@@ -1,6 +1,14 @@
+const fs = require('fs');
 const Nunjucks = require('nunjucks');
-const { imageShortcode, classNamesFunction } = require('./extensions.js');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const {
+  imageShortcode,
+  classNamesFunction,
+  formatDate,
+  splitLines,
+} = require('./extensions.js');
+const Image = require('@11ty/eleventy-img');
+const rss = require('@11ty/eleventy-plugin-rss');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setServerOptions({
@@ -19,6 +27,8 @@ module.exports = function (eleventyConfig) {
   // Add extra features to Nunjucks templates
   eleventyConfig.addNunjucksShortcode('image', imageShortcode);
   eleventyConfig.addNunjucksGlobal('classNames', classNamesFunction);
+  eleventyConfig.addFilter('formatDate', formatDate);
+  eleventyConfig.addFilter('splitLines', splitLines);
 
   // Minify HTML output
   eleventyConfig.addTransform('minify', require('./lib/transforms/minify.js'));
@@ -33,6 +43,31 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight, {
     templateFormats: ['md'],
   });
+  eleventyConfig.addPlugin(rss);
+
+  // Build images for open-graph
+  eleventyConfig.on('afterBuild', () => {
+    const socialPreviewImagesDir = './dist/assets/images/_generated/og/';
+
+    fs.readdir(socialPreviewImagesDir, function (err, files) {
+      if (files.length > 0) {
+        files.forEach(async function (filename) {
+          if (filename.endsWith('.svg')) {
+            let imageUrl = socialPreviewImagesDir + filename;
+
+            await Image(imageUrl, {
+              formats: ['jpeg'],
+              outputDir: './src/assets/images/_generated/og/',
+              filenameFormat: function (id, src, width, format, options) {
+                let outputFilename = filename.substring(0, filename.length - 4);
+                return `${outputFilename}.${format}`;
+              },
+            });
+          }
+        });
+      }
+    });
+  });
 
   return {
     dir: {
@@ -41,6 +76,7 @@ module.exports = function (eleventyConfig) {
       layouts: '_layouts',
     },
     templateFormats: ['njk', 'md'],
+    markdownTemplateEngine: 'njk',
     passthroughFileCopy: true,
   };
 };

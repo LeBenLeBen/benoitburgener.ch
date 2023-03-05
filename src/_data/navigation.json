@@ -11,6 +11,10 @@
     {
       "label": "Events",
       "url": "/events/"
+    },
+    {
+      "label": "Blog",
+      "url": "/blog/"
     }
   ]
 }

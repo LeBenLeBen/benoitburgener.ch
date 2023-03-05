@@ -11,12 +11,12 @@
   function setLightnessMode(isDark, save, toggleBtn) {
     if (isDark) {
       document.documentElement.classList.add('dark');
-      var title = 'Disable dark mode';
+      const title = 'Disable dark mode';
       toggleBtn.setAttribute('aria-label', title);
       toggleBtn.setAttribute('title', title);
     } else {
       document.documentElement.classList.remove('dark');
-      var title = 'Enable dark mode';
+      const title = 'Enable dark mode';
       toggleBtn.setAttribute('aria-label', title);
       toggleBtn.setAttribute('title', title);
     }
@@ -26,12 +26,12 @@
     }
   }
 
-  var storedValue = sessionStorage.getItem('dark-mode');
-  var mediaQuery = matchMedia('(prefers-color-scheme: dark)');
+  const storedValue = sessionStorage.getItem('dark-mode');
+  const mediaQuery = matchMedia('(prefers-color-scheme: dark)');
 
   document.addEventListener('DOMContentLoaded', function() {
-  // Enable toggle button interactivity
-    var toggleBtn = document.querySelector('#lightness-toggle');
+    // Enable toggle button interactivity
+    const toggleBtn = document.querySelector('#lightness-toggle');
     toggleBtn.addEventListener('click', function() {
       setLightnessMode(!document.documentElement.classList.contains('dark'), true, toggleBtn);
     });
@@ -49,7 +49,7 @@
     setLightnessMode(storedValue ? JSON.parse(storedValue) : mediaQuery.matches, false, toggleBtn);
 
     // Postpone button transition activation so it doesn't trigger on page load
-    setTimeout(function() {
+    requestAnimationFrame(function() {
       toggleBtn.classList.add('is-ready');
     });
   });

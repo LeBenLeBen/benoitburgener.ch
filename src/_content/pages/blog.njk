@@ -1,0 +1,14 @@
+---
+title: Blog
+permalink: /blog/index.html
+containerClass: container--sm
+---
+
+<ul class="grid gap-5">
+  {% for post in collections.posts | reverse %}
+    <li>
+      <div class="text-mint-800 dark:text-mint-500">{{ post.date|formatDate }}</div>
+      <h2 class="mb-1"><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+    </li>
+  {% endfor %}
+</ul>

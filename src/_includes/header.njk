@@ -8,8 +8,9 @@
       <nav>
         <ul class="flex items-center gap-3 sm:gap-4 md:gap-5 lg:gap-5 text-sm md:text-base">
           {% for item in navigation.primary %}
+            {% set isCurrentPageOrAncestor = item.url.length > 1 and item.url in page.url or item.url === page.url %}
             <li{% if item.url === '/' %} class="max-xs:hidden"{% endif %}>
-              <a href="{{ item.url }}" class="{{ classNames('no-underline', { 'font-bold': page.url == item.url }) }}" {% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
+              <a href="{{ item.url }}" class="{{ classNames('no-underline', { 'font-bold': isCurrentPageOrAncestor }) }}" {% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
             </li>
           {% endfor %}
           <li>

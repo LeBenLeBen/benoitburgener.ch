@@ -51,7 +51,7 @@
   h6,
   .h6 {
     color: theme('colors.blue.700');
-    line-height: 0.95;
+    line-height: 1.1;
     font-weight: bold;
 
     .dark & {
@@ -63,11 +63,12 @@
   .h1 {
     padding-bottom: 0.2em;
     padding-right: 0.1em;
+    margin-left: -0.04em;
 
     font-family: theme('fontFamily.serif');
     font-size: var(--step-5);
     font-weight: 800;
-    margin-left: -0.04em;
+    line-height: 1;
 
     @supports (-webkit-text-fill-color: transparent) {
       width: fit-content;

@@ -1,0 +1,43 @@
+@layer components {
+  .prose {
+    line-height: 1.75;
+
+    > * + * {
+      margin-top: 1.5em;
+    }
+
+    > pre,
+    > p > picture {
+      display: block;
+      margin-left: calc(var(--container-gap-base) * -1);
+      margin-right: calc(var(--container-gap-base) * -1);
+    }
+
+    ul,
+    ol {
+      display: grid;
+      gap: 0.5em;
+      margin-left: 1.75em;
+
+      li::marker {
+        color: theme('colors.mint.700');
+      }
+    }
+
+    ol {
+      list-style: decimal-leading-zero outside;
+    }
+
+    ul {
+      list-style: disc outside;
+    }
+
+    blockquote {
+      padding-left: 1.5rem;
+
+      color: var(--gray-700);
+
+      border-left: 5px solid var(--gray-400);
+    }
+  }
+}
