@@ -1,5 +1,13 @@
 [
   {
+    "date": "Aug 2023",
+    "event": {
+      "name": "Front Conference",
+      "url": "https://frontconference.com/"
+    },
+    "location": "Zürich, Switzerland"
+  },
+  {
     "date": "Sept 2022",
     "event": {
       "name": "SmashingConf",
