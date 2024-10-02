@@ -1,18 +1,16 @@
 const config = {
-  plugins: [
-    require('postcss-import'),
-    require('tailwindcss/nesting'),
-    require('tailwindcss'),
-    require('autoprefixer'),
-  ],
+  plugins: {
+    'postcss-import': {},
+    'tailwindcss/nesting': {},
+    tailwindcss: {},
+    autoprefixer: {},
+  },
 };
 
 if (process.env.NODE_ENV === 'production') {
-  config.plugins.push(
-    require('cssnano')({
-      preset: 'default',
-    })
-  );
+  config.plugins.cssnano = {
+    preset: 'default',
+  };
 }
 
-module.exports = config;
+export default config;

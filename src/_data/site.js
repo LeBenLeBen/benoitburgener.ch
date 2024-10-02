@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   title: 'Benoît Burgener',
   description: 'Various thoughts on front-end web development.',
   currentYear: new Date().getFullYear(),

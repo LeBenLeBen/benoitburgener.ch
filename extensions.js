@@ -1,14 +1,14 @@
-const path = require('path');
-const Image = require('@11ty/eleventy-img');
-const classNames = require('classnames');
-const { DateTime } = require('luxon');
+import path from 'path';
+import Image from '@11ty/eleventy-img';
+import classNames from 'classnames';
+import { DateTime } from 'luxon';
 
 /**
  * Generate multiple sizes of an image and return the corresponding HTML
  * as a <picture> element.
  */
-function imageShortcode(src, attrs) {
-  src = path.resolve(__dirname, 'src/assets/images/', src);
+export function imageShortcode(src, attrs) {
+  src = path.resolve(import.meta.dirname, 'src/assets/images/', src);
   let options = {
     widths: [400, 600, 800, 1000, 1200],
     formats: ['webp', 'jpg'],
@@ -43,14 +43,14 @@ function imageShortcode(src, attrs) {
  * Generate a space-separated string from a string/array/object of class names
  * while omitting nil values.
  */
-function classNamesFunction(...cls) {
+export function classNamesFunction(...cls) {
   return classNames(cls);
 }
 
 /**
  * Format a date object using Luxon.
  */
-function formatDate(dateObj) {
+export function formatDate(dateObj) {
   return DateTime.fromJSDate(dateObj)
     .setZone('Europe/Zurich')
     .toLocaleString(DateTime.DATE_FULL);
@@ -59,7 +59,7 @@ function formatDate(dateObj) {
 /**
  * Split a string into lines of a maximum length.
  */
-function splitLines(input) {
+export function splitLines(input) {
   const parts = input.split(' ');
   const lines = parts.reduce(function (prev, current) {
     if (!prev.length) {
@@ -79,10 +79,3 @@ function splitLines(input) {
 
   return lines;
 }
-
-module.exports = {
-  imageShortcode,
-  classNamesFunction,
-  formatDate,
-  splitLines,
-};

@@ -1,16 +1,18 @@
-const fs = require('fs');
-const Nunjucks = require('nunjucks');
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const {
+import fs from 'fs';
+import Nunjucks from 'nunjucks';
+import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
+import {
   imageShortcode,
   classNamesFunction,
   formatDate,
   splitLines,
-} = require('./extensions.js');
-const Image = require('@11ty/eleventy-img');
-const rss = require('@11ty/eleventy-plugin-rss');
+} from './extensions.js';
+import Image from '@11ty/eleventy-img';
+import rss from '@11ty/eleventy-plugin-rss';
 
-module.exports = function (eleventyConfig) {
+import minify from './lib/transforms/minify.js';
+
+export default function (eleventyConfig) {
   eleventyConfig.setServerOptions({
     watch: ['dist/**/*'],
     port: 3000,
@@ -31,7 +33,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('splitLines', splitLines);
 
   // Minify HTML output
-  eleventyConfig.addTransform('minify', require('./lib/transforms/minify.js'));
+  eleventyConfig.addTransform('minify', minify);
 
   // Copy static assets to dist
   eleventyConfig.addPassthroughCopy('./src/favicon.ico');
@@ -79,4 +81,4 @@ module.exports = function (eleventyConfig) {
     markdownTemplateEngine: 'njk',
     passthroughFileCopy: true,
   };
-};
+}
