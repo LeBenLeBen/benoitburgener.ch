@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026",
+    "title": "Started working full-time at <a href=\"https://ehro.app/\">EHRO</a>"
+  },
+  {
+    "date": "2024",
+    "title": "Became a volunteer at <a href=\"https://www.paleo.ch/\">Paléo Festival</a>"
+  },
+  {
     "date": "2020",
     "title": "Created <a href=\"https://chusho.dev/\">Chūshō</a>",
     "description": "A library of bare accessible Vue.js components and tools written in TypeScript"
